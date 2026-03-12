@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mattsmith/Desktop/2026DevPortfolio/app/sections.tsx"],"sourcesContent":["\"use client\";\n// Shared motion primitives for scroll-based reveals.\n\nimport { motion, type HTMLMotionProps } from \"framer-motion\";\nimport type { ReactNode } from \"react\";\n\ntype MotionSectionProps = HTMLMotionProps<\"section\"> & {\n  as?: \"section\" | \"div\";\n  children?: ReactNode;\n};\n\nexport function MotionSection({\n  as: Component = \"section\",\n  className = \"\",\n  children,\n  ...props\n}: MotionSectionProps) {\n  return (\n    <motion.section\n      initial={{ opacity: 0, y: 24 }}\n      whileInView={{ opacity: 1, y: 0 }}\n      viewport={{ once: true, amount: 0.22 }}\n      transition={{ duration: 0.5, ease: \"easeOut\" }}\n      className={className}\n      {...props}\n    >\n      {children}\n    </motion.section>\n  );\n}\n\n"],"names":[],"mappings":";;;;;AACA,qDAAqD;AAErD;AAHA;;;AAWO,SAAS,cAAc,EAC5B,IAAI,YAAY,SAAS,EACzB,YAAY,EAAE,EACd,QAAQ,EACR,GAAG,OACgB;IACnB,qBACE,6LAAC,uMAAM,CAAC,OAAO;QACb,SAAS;YAAE,SAAS;YAAG,GAAG;QAAG;QAC7B,aAAa;YAAE,SAAS;YAAG,GAAG;QAAE;QAChC,UAAU;YAAE,MAAM;YAAM,QAAQ;QAAK;QACrC,YAAY;YAAE,UAAU;YAAK,MAAM;QAAU;QAC7C,WAAW;QACV,GAAG,KAAK;kBAER;;;;;;AAGP;KAlBgB"}}]
+}

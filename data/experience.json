@@ -1,0 +1,47 @@
+[
+  {
+    "id": "0",
+    "company": "UVic UAV (Unmanned Ariel Vehicle) Team",
+    "role": "Head of Software - Victoria, BC",
+    "period": "January 2025 - Present",
+    "achievements": [
+      "Delivered 20+ client projects",
+      "Specialized in React and performance optimization",
+      "Collaborated closely with design teams"
+    ]
+  },
+  {
+    "id": "1",
+    "company": "Primer",
+    "role": "Full Stack Software Intern - San Francisco, CA",
+    "period": "April- August, 2025",
+    "achievements": [
+      "Led migration of legacy systems to modern stack",
+      "Mentored 6 junior engineers",
+      "Architected scalable microservices infrastructure"
+    ]
+  },
+  {
+    "id": "2",
+    "company": "Schneider Electric",
+    "role": "Software Intern - Victoria, BC",
+    "period": "April - August, 2023",
+    "achievements": [
+      "Early team member (employee #8)",
+      "Built MVP in 3 months",
+      "Scaled to 100k+ users"
+    ]
+  },
+  {
+    "id": "4",
+    "company": "Tesla",
+    "role": "App Developer - Remote",
+    "period": "September - December, 2020",
+    "achievements": [
+      "Rebuilt a legacy design tool into a modern desktop application using Angular and Ionic.",
+      "reducing mechanical component design time by 90%",
+      "Collaborated closely with design teams"
+    ]
+  }
+]
+

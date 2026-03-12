@@ -1,3 +1,120 @@
-[00:00:02.078] Server  LOG     ✓ Ready in 1904ms
-[00:00:03.517] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.623] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:00.529] Server  LOG     ✓ Ready in 381ms
+[00:00:00.969] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.685] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.895] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:35.181] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:59.494] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:37.870] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:16.127] Browser ERROR   ./app/page.tsx:75:15
+Parsing ecmascript source code failed
+  73 |             </div>
+  74 |             </div>
+> 75 |         </div>
+     |               ^
+> 76 |       </section>
+     | ^^^^^^^
+  77 |
+  78 |       {/* Projects Section */}
+  79 |       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto relative">
+
+Expected '</', got 'jsx text'
+[00:11:32.704] Browser ERROR   ./app/page.tsx:74:15
+Parsing ecmascript source code failed
+  72 |               </p>
+  73 |             </div>
+> 74 |         </div>
+     |               ^
+> 75 |       </section>
+     | ^^^^^^^
+  76 |
+  77 |       {/* Projects Section */}
+  78 |       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto relative">
+
+Expected '</', got 'jsx text'
+[00:13:01.200] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:28.892] Browser ERROR   ./app/page.tsx:74:15
+Parsing ecmascript source code failed
+  72 |               </p>
+  73 |             </div>
+> 74 |         </div>
+     |               ^
+> 75 |       </section>
+     | ^^^^^^^
+  76 |
+  77 |       {/* Projects Section */}
+  78 |       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto relative">
+
+Expected '</', got 'jsx text'
+[00:46:42.331] Browser ERROR   ./app/page.tsx:91:15
+Parsing ecmascript source code failed
+  89 |               </p>
+  90 |               <
+> 91 |               <p>
+     |               ^
+  92 |                 I value ownership, accountability and trust. I value measuring twice and cutting once. I value failing fast. I value calculated
+  93 |                 risks when the outcome for humanity is too great to do nothing. I value questioning everything and then
+  94 |                 knowing when to make a descision and then maintaining the ability to adapt.
+
+Expression expected
+[00:52:52.299] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 3
+[00:58:33.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:17.414] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:01.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:02.570] Server  LOG     ✓ Compiled in 53ms
+[01:08:59.240] Server  LOG     ✓ Compiled in 7ms
+[01:10:34.624] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 24 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `]` at line 24 column 3
+    at .
+      20 |       "Built MVP in 3 months",
+      21 |       "Scaled to 100k+ users"
+      22 |     ]
+      23 |   }
+         |   v
+      24 +   {
+         |   ^
+      25 |     "id": "4",
+      26 |     "company": "Tesla",
+      27 |     "role": "App Developer - Remote",
+      28 |     "period": "September - December, 2020",
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[01:10:39.624] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected value at line 2 column 3
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected value at line 2 column 3
+    at [0]
+       1 | [
+         |   v
+       2 +   ,
+         |   ^
+       3 |   {
+       4 |     "id": "3",
+       5 |     "company": "Searchspring",
+       6 |     "role": "Internal Applications Developer - Remote",
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[01:13:20.854] Server  ERROR   ⨯ ReferenceError: skills is not defined
+[01:13:21.022] Browser ERROR   uncaughtError: ReferenceError: skills is not defined
+[01:13:28.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
