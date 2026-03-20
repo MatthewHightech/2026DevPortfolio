@@ -339,12 +339,12 @@
     margin-bottom: calc(var(--spacing) * 12);
   }
 
-  .flex {
-    display: flex;
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
   }
 
-  .grid {
-    display: grid;
+  .flex {
+    display: flex;
   }
 
   .inline-flex {
@@ -476,11 +476,6 @@
     border-width: 1px;
   }
 
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
-
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -505,16 +500,6 @@
 
   .bg-card {
     background-color: var(--card);
-  }
-
-  .bg-muted\/50 {
-    background-color: var(--muted);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-muted\/50 {
-      background-color: color-mix(in oklab, var(--muted) 50%, transparent);
-    }
   }
 
   .object-cover {
@@ -547,10 +532,6 @@
 
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
-  }
-
-  .pt-12 {
-    padding-top: calc(var(--spacing) * 12);
   }
 
   .pb-6 {
@@ -649,12 +630,6 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:flex-row {
       flex-direction: row;
     }
@@ -687,7 +662,7 @@
 }
 
 :root {
-  --background: #fff8e4;
+  --background: #fffbee;
   --foreground: #2d2926;
   --card: #fffdf0;
   --card-foreground: #2d2926;

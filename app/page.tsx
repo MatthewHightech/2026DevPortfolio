@@ -77,7 +77,7 @@ export default function Home() {
             <div className="max-w-2xl space-y-4 leading-relaxed">
               <p>
                 I have a very board approach to engineering. The more I can learn and expose myself to, the more data points I have to
-                make decisions with. I learned guitar and cinematography and surfing and woodworking to become a better engineer.
+                make decisions with. I learned guitar, cinematography, surfing and woodworking to become a better engineer.
                 I suppose I learned to learn.
               </p>
               <p>
@@ -85,8 +85,7 @@ export default function Home() {
               </p>
               <p>
                 I value ownership, accountability and trust. I value measuring twice and cutting once. I value failing fast. I value calculated
-                risks when the outcome for humanity is too great to do nothing. I value questioning everything and then
-                knowing when to make a descision and then maintaining the ability to adapt.
+                risks. I value questioning everything, knowing when to make a descision and maintaining the ability to adapt.
               </p>
             </div>
         </div>
@@ -116,16 +115,12 @@ export default function Home() {
 
       {/* Contact Section */}
       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto">
-        <SectionLabel index="004" label="Contact" />
-
         <div className="max-w-2xl">
-          <p className="text-lg mb-12 leading-relaxed">
-            Open to new opportunities, contract work, or interesting technical
-            challenges. Currently available for full-time positions and
-            consulting.
+          <p className="text-lg mb-4 leading-relaxed">
+            Always happy to chat, shoot me an email!
           </p>
 
-          <div className="space-y-4 mb-12">
+          <div className="space-y-4 mb-16">
             <a
               href="mailto:mattsmithwebdev@gmail.com"
               className="flex items-center gap-3 hover:text-accent transition-colors group"

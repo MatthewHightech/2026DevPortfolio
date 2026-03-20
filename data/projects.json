@@ -1,11 +1,10 @@
 [
   {
     "id": "aerial-ops-platform",
-    "title": "Aerial Ops Platform",
-    "subtitle": "Real-time drone fleet orchestration",
+    "title": "Autonomous Firefighting UAV",
+    "subtitle": "Fire detection and navigation using computer vision ML models",
     "description": "A control surface for coordinating autonomous drone fleets with live telemetry, geofencing, and on-device ML for anomaly detection.",
-    "techStack": ["TypeScript", "Next.js", "WebSockets", "Python", "ONNX Runtime", "ROS2"],
-    "githubUrl": "https://github.com/example/aerial-ops-platform",
+    "techStack": ["Python", "DroneKit", "Ardupilot", "Docker"],
     "liveUrl": "https://aerial-ops.example.com",
     "media": {
       "type": "image",
@@ -16,10 +15,10 @@
   },
   {
     "id": "ml-insights-studio",
-    "title": "ML Insights Studio",
-    "subtitle": "Explainable ML for real systems",
+    "title": "Paint Mixer (iOS/Android)",
+    "subtitle": "Creative tooling for artists to mix and match paint colors",
     "description": "An interactive workbench for pairing sensor data with explainable ML models, featuring timeline scrubbing, saliency overlays, and experiment tracking.",
-    "techStack": ["React", "Next.js", "PyTorch", "PostgreSQL", "Redis"],
+    "techStack": ["React Native", "Nativewind", "PyTorch"],
     "githubUrl": "https://github.com/example/ml-insights-studio",
     "liveUrl": "https://ml-insights.example.com",
     "media": {
@@ -31,10 +30,10 @@
   },
   {
     "id": "edge-lab-kit",
-    "title": "Edge Lab Kit",
-    "subtitle": "Hardware-in-the-loop experimentation",
+    "title": "Surf Scanner (Next.js/Python)",
+    "subtitle": "AI powered surf break finder",
     "description": "A portable lab for running hardware-in-the-loop simulations on embedded targets, with a web UI for flashing, profiling, and logging.",
-    "techStack": ["Rust", "Embedded C", "Next.js", "gRPC", "Grafana"],
+    "techStack": ["Next.js", "Python", "Tailwind CSS", "PostgreSQL", "Docker"],
     "githubUrl": "https://github.com/example/edge-lab-kit",
     "liveUrl": "https://edge-lab.example.com",
     "media": {
