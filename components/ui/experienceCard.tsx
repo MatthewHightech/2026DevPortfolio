@@ -8,7 +8,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ item }: ExperienceCardProps) {
   return (
-    <article className="border-l-2 border-accent p-6 bg-card transition-colors">
+    <article className="border border-border p-6 bg-card transition-colors">
       <div className="mb-4">
         <h3 className="text-xl mb-1">{item.company}</h3>
         <p className="text-muted-foreground">{item.role}</p>

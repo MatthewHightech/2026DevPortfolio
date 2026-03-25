@@ -59,10 +59,10 @@ function SectionLabel({ index, label }) {
 }),
 "[project]/data/projects.json (json)", ((__turbopack_context__) => {
 
-__turbopack_context__.v([{"id":"aerial-ops-platform","title":"Autonomous Firefighting UAV","subtitle":"Fire detection and navigation using computer vision ML models","description":"A control surface for coordinating autonomous drone fleets with live telemetry, geofencing, and on-device ML for anomaly detection.","techStack":["Python","DroneKit","Ardupilot","Docker"],"liveUrl":"https://aerial-ops.example.com","media":{"type":"image","src":"/images/aerial-ops-placeholder.jpg","alt":"Drone fleet control dashboard UI mock"},"featured":true},{"id":"ml-insights-studio","title":"Paint Mixer (iOS/Android)","subtitle":"Creative tooling for artists to mix and match paint colors","description":"An interactive workbench for pairing sensor data with explainable ML models, featuring timeline scrubbing, saliency overlays, and experiment tracking.","techStack":["React Native","Nativewind","PyTorch"],"githubUrl":"https://github.com/example/ml-insights-studio","liveUrl":"https://ml-insights.example.com","media":{"type":"video","src":"/videos/ml-insights-placeholder.mp4","alt":"Walkthrough of ML experiment dashboard"},"featured":false},{"id":"edge-lab-kit","title":"Surf Scanner (Next.js/Python)","subtitle":"AI powered surf break finder","description":"A portable lab for running hardware-in-the-loop simulations on embedded targets, with a web UI for flashing, profiling, and logging.","techStack":["Next.js","Python","Tailwind CSS","PostgreSQL","Docker"],"githubUrl":"https://github.com/example/edge-lab-kit","liveUrl":"https://edge-lab.example.com","media":{"type":"image","src":"/images/edge-lab-placeholder.jpg","alt":"Hardware test bench with edge devices"},"featured":false}]);}),
+__turbopack_context__.v([{"id":"aerial-ops-platform","title":"Autonomous Firefighting UAV","subtitle":"Fire detection and navigation using computer vision ML models","description":"As the Head of Software for the UVic AERO Team, I've been leading a team of developers for the past year to design autonomous flight systems for wildfirefighting drones. These custom built vehicles run on a Raspberry Pi where we run trained computer vision models to detect fire targets and maneuver the drone to extinguish fires and collect and upload data to the cloud. ","techStack":["Python","DroneKit","Ardupilot","Docker"],"liveUrl":"https://uvicaero.com/","media":{"type":"image","src":"/images/aerial-ops-placeholder.jpg","alt":"Drone fleet control dashboard UI mock"},"featured":true},{"id":"ios-app","title":"Pigment Paint Mixer (iOS App)","subtitle":"Creative tooling for artists to mix and match paint colors","description":"A react native app for artists to take photos of a scene they wish to paint and then build a virtual palette of colors from the image. Each palette color is then broken down into it's fundamental colors (red, yellow, blue, white, black) for the arist to create a mix from.","techStack":["React Native","Nativewind","Expo"],"githubUrl":"https://github.com/MatthewHightech/Pigment","liveUrl":"https://apps.apple.com/us/app/pigment-paint-mixer/id6760786912","media":{"type":"video","src":"/videos/ml-insights-placeholder.mp4","alt":"Walkthrough of ML experiment dashboard"},"featured":false}]);}),
 "[project]/data/experience.json (json)", ((__turbopack_context__) => {
 
-__turbopack_context__.v([{"id":"0","company":"UVic UAV Team (Unmanned Ariel Vehicle)","role":"Head of Software - Victoria, BC","period":"January 2025 - Present","achievements":["Managed a team of 5 developers to build flight software for a fire-fighting drone to navigate and extinguish fire targets","Developed a flight simulation system with Docker to emulate our drone's hardware, shortening our iteration cycle by 80% and reducing vehicle risk.","Reviewed 45 PRs, hosted weekly software meetings, and maintained our project managment system meeting all deadlines"]},{"id":"1","company":"Primer","role":"Full Stack Software Intern - San Francisco, CA","period":"April- August, 2025","achievements":["Took ownership of multiple 0-1 projects across frontend, backend and mobile domains built with Next.js and React Native","Shipped over 100,000 lines of code over the internship, releasing on a 2 week cycle to meet ambitious deadlines","Built an internal tooling platform to automate PDF filing for over 500 customers, reducing manual effort by 90%"]},{"id":"2","company":"Schneider Electric","role":"Software Intern - Victoria, BC","period":"April - August, 2023","achievements":["Developed an electrical monitoring app using .NET, ensuring the safety of client facilities by delivering metric reports and alerts",""]},{"id":"4","company":"Tesla","role":"App Developer - Remote","period":"September - December, 2020","achievements":["Rebuilt a legacy design tool into a modern desktop application using Angular and Ionic reducing cam design time by 90%","",""]}]);}),
+__turbopack_context__.v([{"id":"0","company":"UVic UAV Team","role":"Head of Software - Victoria, BC","period":"January 2025 - Present","achievements":["Managed a team of 5 developers to build flight software for a fire-fighting drone to navigate and extinguish fire targets","Developed a flight simulation system with Docker to emulate our drone's hardware, shortening our iteration cycle by 80% and reducing vehicle risk.","Reviewed 45 PRs, hosted weekly software meetings, and maintained our project managment system meeting all deadlines"]},{"id":"1","company":"Primer","role":"Full Stack Software Intern - San Francisco, CA","period":"April- August, 2025","achievements":["Took ownership of multiple 0-1 projects across frontend, backend and mobile domains built with Next.js and React Native","Shipped over 100,000 lines of code over the internship, releasing on a 2 week cycle to meet ambitious deadlines","Built an internal tooling platform to automate PDF filing for over 500 customers, reducing manual effort by 90%"]},{"id":"2","company":"Schneider Electric","role":"Software Intern - Victoria, BC","period":"April - August, 2023","achievements":["Developed an electrical monitoring app using .NET, ensuring the safety of client facilities by delivering metric reports and alerts","Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"]},{"id":"4","company":"Tesla","role":"App Developer - Remote","period":"September - December, 2020","achievements":["Rebuilt a legacy design tool written in C into a modern desktop application using Angular and Ionic reducing cam design time by 90%","Organized weekly meetings with Senior Engineers to review progress and provide feedback so the tool would meet the needs of the team"]}]);}),
 "[project]/components/ui/projectCard.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -71,6 +71,8 @@ __turbopack_context__.s([
     ()=>ProjectCard
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+;
 ;
 function ProjectCard({ project, index }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -89,7 +91,7 @@ function ProjectCard({ project, index }) {
                                     children: String(index + 1).padStart(2, "0")
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/projectCard.tsx",
-                                    lineNumber: 16,
+                                    lineNumber: 17,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -97,13 +99,13 @@ function ProjectCard({ project, index }) {
                                     children: project.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/projectCard.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 20,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/ui/projectCard.tsx",
-                            lineNumber: 15,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, this),
                         project.subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -111,18 +113,18 @@ function ProjectCard({ project, index }) {
                             children: project.subtitle
                         }, void 0, false, {
                             fileName: "[project]/components/ui/projectCard.tsx",
-                            lineNumber: 22,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/ui/projectCard.tsx",
-                    lineNumber: 14,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/projectCard.tsx",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -130,7 +132,7 @@ function ProjectCard({ project, index }) {
                 children: project.description
             }, void 0, false, {
                 fileName: "[project]/components/ui/projectCard.tsx",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -142,23 +144,23 @@ function ProjectCard({ project, index }) {
                             children: tech
                         }, tech, false, {
                             fileName: "[project]/components/ui/projectCard.tsx",
-                            lineNumber: 32,
+                            lineNumber: 33,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/ui/projectCard.tsx",
-                    lineNumber: 30,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ui/projectCard.tsx",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-wrap gap-4 text-sm text-muted-foreground",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                    project.githubUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: project.githubUrl,
                         target: "_blank",
                         rel: "noopener noreferrer",
@@ -167,41 +169,61 @@ function ProjectCard({ project, index }) {
                             children: "GitHub"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/projectCard.tsx",
-                            lineNumber: 49,
-                            columnNumber: 11
+                            lineNumber: 51,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ui/projectCard.tsx",
-                        lineNumber: 43,
-                        columnNumber: 9
+                        lineNumber: 45,
+                        columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                    project.liveUrl && (project.id.includes("ios-app") ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: project.liveUrl,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "inline-flex items-center hover:opacity-90 transition-opacity",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/images/ios.svg",
+                            alt: "Download on the App Store",
+                            width: 90,
+                            height: 30,
+                            className: "h-9 w-auto"
+                        }, void 0, false, {
+                            fileName: "[project]/components/ui/projectCard.tsx",
+                            lineNumber: 62,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/ui/projectCard.tsx",
+                        lineNumber: 56,
+                        columnNumber: 13
+                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: project.liveUrl,
                         target: "_blank",
                         rel: "noopener noreferrer",
                         className: "inline-flex items-center gap-2 hover:text-accent transition-colors",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: "Live Demo"
+                            children: "Team Website"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/projectCard.tsx",
-                            lineNumber: 57,
-                            columnNumber: 11
+                            lineNumber: 77,
+                            columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ui/projectCard.tsx",
-                        lineNumber: 51,
-                        columnNumber: 9
-                    }, this)
+                        lineNumber: 71,
+                        columnNumber: 13
+                    }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ui/projectCard.tsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/projectCard.tsx",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 }
@@ -217,7 +239,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function ExperienceCard({ item }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
-        className: "border-l-2 border-accent p-6 bg-card transition-colors",
+        className: "border border-border p-6 bg-card transition-colors",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mb-4",

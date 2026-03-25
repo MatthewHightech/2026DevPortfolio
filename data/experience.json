@@ -1,7 +1,7 @@
 [
   {
     "id": "0",
-    "company": "UVic UAV Team (Unmanned Ariel Vehicle)",
+    "company": "UVic UAV Team",
     "role": "Head of Software - Victoria, BC",
     "period": "January 2025 - Present",
     "achievements": [
@@ -28,7 +28,7 @@
     "period": "April - August, 2023",
     "achievements": [
       "Developed an electrical monitoring app using .NET, ensuring the safety of client facilities by delivering metric reports and alerts",
-      ""
+      "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
     ]
   },
   {
@@ -37,9 +37,8 @@
     "role": "App Developer - Remote",
     "period": "September - December, 2020",
     "achievements": [
-      "Rebuilt a legacy design tool into a modern desktop application using Angular and Ionic reducing cam design time by 90%",
-      "",
-      ""
+      "Rebuilt a legacy design tool written in C into a modern desktop application using Angular and Ionic reducing cam design time by 90%",
+      "Organized weekly meetings with Senior Engineers to review progress and provide feedback so the tool would meet the needs of the team"
     ]
   }
 ]

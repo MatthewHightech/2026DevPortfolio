@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type projects from "@/data/projects.json";
 
 type Project = (typeof projects)[number];
@@ -40,22 +41,42 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
 
       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-        <a
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 hover:text-accent transition-colors"
-        >
-          <span>GitHub</span>
-        </a>
-        <a
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 hover:text-accent transition-colors"
-        >
-          <span>Live Demo</span>
-        </a>
+        {project.githubUrl && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+          >
+            <span>GitHub</span>
+          </a>
+        )}
+        {project.liveUrl &&
+          (project.id.includes("ios-app") ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:opacity-90 transition-opacity"
+            >
+              <Image
+                src="/images/ios.svg"
+                alt="Download on the App Store"
+                width={90}
+                height={30}
+                className="h-9 w-auto"
+              />
+            </a>
+          ) : (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+            >
+              <span>Team Website</span>
+            </a>
+          ))}
       </div>
     </article>
   );
