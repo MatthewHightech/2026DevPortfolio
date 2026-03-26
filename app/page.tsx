@@ -106,7 +106,7 @@ export default function Home() {
       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto relative">
         <SectionLabel index="003" label="Experience" />
 
-        <div className="space-y-12">
+        <div className="space-y-6">
           {experience.map((item) => (
             <ExperienceCard key={item.id} item={item} />
           ))}

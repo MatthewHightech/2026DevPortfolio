@@ -1,7 +1,15 @@
 import Image from "next/image";
+import { Github } from "lucide-react";
 import type projects from "@/data/projects.json";
+import {
+  ProjectMediaCarousel,
+  type ProjectMediaItem,
+} from "@/components/ui/projectMediaCarousel";
 
 type Project = (typeof projects)[number];
+
+const linkButtonClass =
+  "inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm text-muted-foreground transition-colors hover:border-accent hover:bg-muted hover:text-accent";
 
 interface ProjectCardProps {
   project: Project;
@@ -25,6 +33,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
 
+      {project.media && project.media.length > 0 && (
+        <ProjectMediaCarousel
+          key={project.id}
+          media={project.media as ProjectMediaItem[]}
+        />
+      )}
+
       <p className="mb-4 leading-relaxed">{project.description}</p>
 
       <div className="flex flex-wrap items-center gap-4 mb-4">
@@ -46,8 +61,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+            className={linkButtonClass}
           >
+            <Github className="size-4 shrink-0" aria-hidden />
             <span>GitHub</span>
           </a>
         )}
@@ -72,7 +88,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+              className={linkButtonClass}
             >
               <span>Team Website</span>
             </a>

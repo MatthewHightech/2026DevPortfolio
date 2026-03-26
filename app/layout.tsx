@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Engineering Portfolio · Broad Reach",
+  title: "Matt Smith - Software Engineer Portfolio",
   description:
-    "Software, ML, and hardware/drone engineering portfolio showcasing systems thinking across the stack.",
+    "Software, ML, and hardware/drone engineering portfolio showcasing projects and experiences across the stack.",
 };
 
 export default function RootLayout({

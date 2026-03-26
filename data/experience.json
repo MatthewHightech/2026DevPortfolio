@@ -32,12 +32,32 @@
     ]
   },
   {
+    "id": "3",
+    "company": "Chatterblock",
+    "role": "Web Developer Intern - Victoria, BC",
+    "period": "April - August, 2022",
+    "achievements": [
+      "Designed and built an admin dashboard using Python Django that tracked and visualizeduser activities to provide data for more informed business decisions",
+      "Trained new developers through presentations, workshops and pair programming sessions to decrease their onboarding time"
+    ]
+  },
+  {
     "id": "4",
+    "company": "Searchspring",
+    "role": "Internal Application Developer - Remote",
+    "period": "March - August, 2021",
+    "achievements": [
+      "Developed an automated deployment system to streamline product releases using Go and Typescript, reducing deployment time by over 90%",
+      "Built an interactive Organization Chart using React and Chart JS, enhancing cross-team communication and increasing company-wide visibility of team structures"
+    ]
+  },
+  {
+    "id": "5",
     "company": "Tesla",
     "role": "App Developer - Remote",
     "period": "September - December, 2020",
     "achievements": [
-      "Rebuilt a legacy design tool written in C into a modern desktop application using Angular and Ionic reducing cam design time by 90%",
+      "Rebuilt a legacy design tool written in C into a modern desktop app using Angular and Ionic reducing cam design time by 90%",
       "Organized weekly meetings with Senior Engineers to review progress and provide feedback so the tool would meet the needs of the team"
     ]
   }

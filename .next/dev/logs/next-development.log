@@ -1,259 +1,289 @@
-[00:00:00.888] Server  LOG     ✓ Ready in 694ms
-[00:00:01.650] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:01.764] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:00:39.510] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:00:42.034] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:00:44.283] Browser ERROR   ./components/ui/projectCard.tsx:63:11
-Parsing ecmascript source code failed
-  61 |         </a>
-  62 |         <a
-> 63 |           href={project.liveUrl}
-     |           ^^^^
-  64 |           target="_blank"
-  65 |           rel="noopener noreferrer"
-  66 |           className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+[00:00:00.588] Server  LOG     ✓ Ready in 432ms
+[00:00:01.387] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:19:41.050] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[12:19:41.050] Browser ERROR   Image is missing required "src" property: <img>
+[12:19:41.050] Browser ERROR   Image is missing required "alt" property. Please add Alternative Text to describe the image for screen readers and search engines.
+[12:19:41.050] Browser ERROR   Image is missing required "src" property: <img>
+[12:19:41.050] Browser ERROR   Image is missing required "alt" property. Please add Alternative Text to describe the image for screen readers and search engines.
+[12:19:47.038] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
 
-Expected '</', got 'ident'
+Caused by:
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
 
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:00:46.861] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:01:00.827] Browser ERROR   ./components/ui/projectCard.tsx:53:11
-Parsing ecmascript source code failed
-  51 |         </a>
-  52 |         <a
-> 53 |           href={project.liveUrl}
-     |           ^^^^
-  54 |           target="_blank"
-  55 |           rel="noopener noreferrer"
-  56 |           className="inline-flex items-center gap-2 hover:text-accent transition-colors"
-
-Expected '</', got 'ident'
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+    at [0].media[0].?
+       7 |     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
+       8 |     "liveUrl": "https://uvicaero.com/",
+       9 |     "media": [
+      10 |       {
+         |         v
+      11 +         type: "image"
+         |         ^
+      12 |       }
+      13 |     ],
+      14 |     "featured": true
+      15 |   },
 
 Import trace:
   Server Component:
-    ./components/ui/projectCard.tsx
+    ./data/projects.json
     ./app/page.tsx
-[00:01:01.959] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:01:08.674] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
-[00:01:11.268] Browser ERROR   ./components/ui/projectCard.tsx:53:11
-Parsing ecmascript source code failed
-  51 |           </a>
-  52 |         <a
-> 53 |           href={project.githubUrl}
-     |           ^^^^
-  54 |           target="_blank"
-  55 |           rel="noopener noreferrer"
-  56 |           className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+[12:19:49.038] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
 
-Expected '</', got 'ident'
+Caused by:
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+    at [0].media[0].?
+       7 |     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
+       8 |     "liveUrl": "https://uvicaero.com/",
+       9 |     "media": [
+      10 |       {
+         |         v
+      11 +         type: "image",
+         |         ^
+      12 |         link: "/images/AERO/aero_1.png",
+      13 |         alt: "Aerial ops platform"
+      14 |       }
+      15 |     ],
 
 Import trace:
   Server Component:
-    ./components/ui/projectCard.tsx
+    ./data/projects.json
     ./app/page.tsx
-[00:01:17.339] Browser ERROR   ./components/ui/projectCard.tsx:77:5
-Parsing ecmascript source code failed
-  75 |         </a>
-  76 |       </div>
-> 77 |     </article>
-     |     ^
-  78 |   );
-  79 | }
-  80 |
+[12:19:54.038] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
 
-Expression expected
+Caused by:
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+    at [0].media[0].?
+       7 |     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
+       8 |     "liveUrl": "https://uvicaero.com/",
+       9 |     "media": [
+      10 |       {
+         |         v
+      11 +         type: "image",
+         |         ^
+      12 |         link: "/images/AERO/aero_1.png",
+      13 |         alt: "Aerial ops platform"
+      14 |       },
+      15 |       {
 
 Import trace:
   Server Component:
-    ./components/ui/projectCard.tsx
+    ./data/projects.json
     ./app/page.tsx
-[00:01:17.339] Browser ERROR   ./components/ui/projectCard.tsx:77:6
-Parsing ecmascript source code failed
-  75 |         </a>
-  76 |       </div>
-> 77 |     </article>
-     |      ^^^^^^^^^
-  78 |   );
-  79 | }
-  80 |
+[12:19:59.038] Browser ERROR   ./data/projects.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/projects.json (json)
 
-Unterminated regexp literal
+Caused by:
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/projects.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: key must be a string at line 11 column 9
+    at [0].media[0].?
+       7 |     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
+       8 |     "liveUrl": "https://uvicaero.com/",
+       9 |     "media": [
+      10 |       {
+         |         v
+      11 +         type: "image",
+         |         ^
+      12 |         link: "/images/AERO/aero_1.png",
+      13 |         alt: "Aerial ops platform"
+      14 |       },
+      15 |       {
 
 Import trace:
   Server Component:
-    ./components/ui/projectCard.tsx
+    ./data/projects.json
     ./app/page.tsx
-[00:01:19.130] Browser ERROR   ./components/ui/projectCard.tsx:77:5
-Parsing ecmascript source code failed
-  75 |         </a>
-  76 |       </div>
-> 77 |     </article>
-     |     ^
-  78 |   );
-  79 | }
-  80 |
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:01:19.130] Browser ERROR   ./components/ui/projectCard.tsx:77:6
-Parsing ecmascript source code failed
-  75 |         </a>
-  76 |       </div>
-> 77 |     </article>
-     |      ^^^^^^^^^
-  78 |   );
-  79 | }
-  80 |
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:01:20.514] Browser ERROR   ./components/ui/projectCard.tsx:77:5
-Parsing ecmascript source code failed
-  75 |         </a>
-  76 |       </div>
-> 77 |     </article>
-     |     ^
-  78 |   );
-  79 | }
-  80 |
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:01:20.514] Browser ERROR   ./components/ui/projectCard.tsx:77:6
-Parsing ecmascript source code failed
-  75 |         </a>
-  76 |       </div>
-> 77 |     </article>
-     |      ^^^^^^^^^
-  78 |   );
-  79 | }
-  80 |
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:01:22.543] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:22.647] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:01:23.602] Browser ERROR   ./components/ui/projectCard.tsx:64:23
-Parsing ecmascript source code failed
-  62 |         )}
-  63 |         <a
-> 64 |           <span>GitHub</span>
-     |                       ^
-  65 |         </a>
-  66 |       </div>
-  67 |     </article>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:01:23.603] Browser ERROR   ./components/ui/projectCard.tsx:64:24
-Parsing ecmascript source code failed
-  62 |         )}
-  63 |         <a
-> 64 |           <span>GitHub</span>
-     |                        ^^^^^^
-  65 |         </a>
-  66 |       </div>
-  67 |     </article>
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/ui/projectCard.tsx
-    ./app/page.tsx
-[00:01:25.547] Server  LOG     ✓ Compiled in 9ms
-[00:01:25.690] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:05:16.467] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:05:18.622] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:07:07.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:07.602] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:07:31.372] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:07:37.167] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:07:54.764] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:08:53.759] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:09:01.083] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:09:26.417] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:10:08.074] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:11:04.414] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:11:22.897] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:11:25.361] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:12:28.017] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:16:39.370] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:16:55.612] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:16:58.317] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:08.297] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:11.216] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:20.602] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:22.187] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:26.041] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:29.254] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:32.379] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:34.242] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:42.790] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:46.079] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:48.703] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:51.133] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:52.243] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:55.854] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:17:59.373] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:06.007] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:09.215] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:23.677] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:30.262] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:41.990] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:41.990] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:50.216] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:53.105] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:18:55.738] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:19:05.547] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
-[00:22:00.334] Browser ERROR   ./data/experience.json
+[12:22:18.035] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[12:23:01.529] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 3
+[12:24:39.039] Browser ERROR   ./data/experience.json
 Code generation for chunk item errored
 An error occurred while generating the chunk item [project]/data/experience.json (json)
 
 Caused by:
-- Unable to make a module from invalid JSON: trailing comma at line 42 column 5
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 174
 
 Debug info:
 - An error occurred while generating the chunk item [project]/data/experience.json (json)
 - Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
-- Unable to make a module from invalid JSON: trailing comma at line 42 column 5
-    at [3].achievements
-      38 |     "period": "September - December, 2020",
-      39 |     "achievements": [
-      40 |       "Rebuilt a legacy design tool written in C into a modern desktop application using Angular and Ionic reducing cam design time by 90%",
-      41 |       "Organized weekly meetings with Senior Engineers to review progress and provide feedback so the tool would meet the needs of the team",
-         |     v
-      42 +     ]
-         |     ^
-      43 |   }
-      44 | ]
-      45 | 
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 174
+    at [4].achievements[0]
+      46 |     "company": "Searchspring",
+      47 |     "role": "Internal Application Developer - Remote",
+      48 |     "period": "March - August, 2021",
+      49 |     "achievements": [
+         |                                                                                                                                                                              v
+      50 +       "Developed an automated deployment system to streamline product releases using \textbf{Go} and \textbf{Typescript}, reducing deployment time and complexity by over 90\%.",
+         |                                                                                                                                                                              ^
+      51 |       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+      52 |     ]
+      53 |   },
+      54 |   {
 
 Import trace:
   Server Component:
     ./data/experience.json
     ./app/page.tsx
-[00:22:24.442] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:24:45.037] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 165
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 165
+    at [4].achievements[0]
+      46 |     "company": "Searchspring",
+      47 |     "role": "Internal Application Developer - Remote",
+      48 |     "period": "March - August, 2021",
+      49 |     "achievements": [
+         |                                                                                                                                                                     v
+      50 +       "Developed an automated deployment system to streamline product releases using Go and \textbf{Typescript}, reducing deployment time and complexity by over 90\%.",
+         |                                                                                                                                                                     ^
+      51 |       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+      52 |     ]
+      53 |   },
+      54 |   {
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[12:24:52.038] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 156
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 156
+    at [4].achievements[0]
+      46 |     "company": "Searchspring",
+      47 |     "role": "Internal Application Developer - Remote",
+      48 |     "period": "March - August, 2021",
+      49 |     "achievements": [
+         |                                                                                                                                                            v
+      50 +       "Developed an automated deployment system to streamline product releases using Go and Typescript, reducing deployment time and complexity by over 90\%.",
+         |                                                                                                                                                            ^
+      51 |       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+      52 |     ]
+      53 |   },
+      54 |   {
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[12:25:06.039] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 141
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: invalid escape at line 50 column 141
+    at [4].achievements[0]
+      46 |     "company": "Searchspring",
+      47 |     "role": "Internal Application Developer - Remote",
+      48 |     "period": "March - August, 2021",
+      49 |     "achievements": [
+         |                                                                                                                                             v
+      50 +       "Developed an automated deployment system to streamline product releases using Go and Typescript, reducing deployment time by over 90\%.",
+         |                                                                                                                                             ^
+      51 |       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+      52 |     ]
+      53 |   },
+      54 |   {
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[12:27:40.038] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 41 column 0
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 41 column 0
+    at [3].achievements[0]
+      37 |     "role": "Web Developer Intern - Victoria, BC",
+      38 |     "period": "April - August, 2022",
+      39 |     "achievements": [
+      40 |       "Designed and built an admin dashboard using Python and SQL that tracked
+         | v
+      41 + user activities to provide data for more informed business decisions",
+         | ^
+      42 |       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+      43 |     ]
+      44 |   },
+      45 |   {
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[12:28:44.038] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 42 column 0
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: control character (\u0000-\u001F) found while parsing a string at line 42 column 0
+    at [3].achievements[1]
+      38 |     "period": "April - August, 2022",
+      39 |     "achievements": [
+      40 |       "Designed and built an admin dashboard using Python Django that tracked and visualizeduser activities to provide data for more informed business decisions",
+      41 |       "Trained new developers through workshops and pair programming
+         | v
+      42 + sessions to decrease their onboarding time"
+         | ^
+      43 |     ]
+      44 |   },
+      45 |   {
+      46 |     "id": "4",
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
