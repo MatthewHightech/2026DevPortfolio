@@ -71,21 +71,30 @@ export default function Home() {
             
 
             <p className="text-xl md:text-2xl mb-8 max-w-2xl">
-              Full Stack Software Engineer. Love leading teams and being led by others. Believer in people, tech and helping people with tech.
+              Full Stack Software Engineer. Love leading teams and being led by others. Believer in people and technology.
             </p>
 
             <div className="max-w-2xl space-y-4 leading-relaxed">
               <p>
                 I have a very board approach to engineering. The more I can learn and expose myself to, the more data points I have to
-                make decisions with. I learned guitar, cinematography, surfing and woodworking to become a better engineer.
-                I suppose I learned to learn.
+                make decisions with. I learned guitar,{" "}
+                <a
+                  href="https://tovproductions.ca/video"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  cinematography
+                </a>
+                , surfing and woodworking to become a better engineer.
+                I'm constantly learning how to learn better.
               </p>
               <p>
               And I love it.
               </p>
               <p>
                 I value ownership, accountability and trust. I value measuring twice and cutting once. I value failing fast. I value calculated
-                risks. I value questioning everything, knowing when to make a descision and maintaining the ability to adapt.
+                risks. I value simplicity as a default and complexity when necessary. I value questioning everything, knowing when to make a descision and maintaining the ability to adapt.
               </p>
             </div>
         </div>

@@ -287,3 +287,25 @@ Import trace:
   Server Component:
     ./data/experience.json
     ./app/page.tsx
+[12:39:44.358] Server  LOG     ✓ Compiled in 26ms
+[12:39:49.323] Server  LOG     ✓ Compiled in 25ms
+[12:39:51.479] Server  LOG     ✓ Compiled in 19ms
+[12:39:57.702] Server  LOG     ✓ Compiled in 28ms
+[12:40:03.400] Server  LOG     ✓ Compiled in 29ms
+[12:40:47.456] Server  LOG     ✓ Compiled in 24ms
+[12:40:48.771] Server  LOG     ✓ Compiled in 25ms
+[12:40:55.261] Server  LOG     ✓ Compiled in 25ms
+[12:41:43.227] Server  LOG     ✓ Compiled in 21ms
+[12:42:26.905] Server  LOG     ✓ Compiled in 30ms
+[12:42:28.845] Server  LOG     ✓ Compiled in 27ms
+[12:42:34.333] Server  LOG     ✓ Compiled in 23ms
+[12:42:44.752] Server  LOG     ✓ Compiled in 27ms
+[12:45:49.756] Server  LOG     ✓ Compiled in 35ms
+[12:45:53.826] Server  LOG     ✓ Compiled in 24ms
+[12:45:59.396] Server  LOG     ✓ Compiled in 27ms
+[12:46:03.077] Server  LOG     ✓ Compiled in 71ms
+[12:46:15.562] Server  LOG     ✓ Compiled in 28ms
+[12:46:19.325] Server  LOG     ✓ Compiled in 21ms
+[12:46:34.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[13:08:00.172] Server  LOG     ✓ Compiled in 49ms
+[13:08:13.070] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
