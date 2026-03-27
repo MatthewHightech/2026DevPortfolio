@@ -3,7 +3,7 @@
     "id": "aerial-ops-platform",
     "title": "Autonomous Firefighting UAV",
     "subtitle": "Fire detection and navigation using computer vision ML models",
-    "description": "As the Head of Software for the UVic AERO Team, I've been leading a team of developers for the past year to design autonomous flight systems for wildfire fighting drones. These custom built vehicles run on a Raspberry Pi where we run trained computer vision models to detect fire targets and maneuver the drone to extinguish fires and collect data to analyze.",
+    "description": "As Head of Software for the UVic AERO team, I lead a team of 5 developers building flight software that lets our wildfire-response drone find, navigate, and extinguish fires while collecting data for analysis. The vehicle uses a YOLO-based computer vision model that we trained and operates on a Raspberry Pi to spot fires and guide the vehicle. A big project this year was building a Dockerized flight simulator that mirrors our hardware in containers, which cut our iteration cycle by about 80% and lets us test without risking the damage to the vehicle. As the team lead, I run weekly software meetings, pair-program with the members, review all pull requests, and keep our project management process on track.",
     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
     "liveUrl": "https://uvicaero.com/",
     "media": [

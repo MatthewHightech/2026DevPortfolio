@@ -1906,12 +1906,6 @@
     margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
   }
 
-  :where(.space-y-12 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
-  }
-
   :where(.space-y-reverse > :not(:last-child)) {
     --tw-space-y-reverse: 1;
   }
@@ -6824,9 +6818,9 @@
 }
 
 :root {
-  --background: #fffbee;
+  --background: #fff3e7;
   --foreground: #2d2926;
-  --card: #fffdf0;
+  --card: #fcf8ef;
   --card-foreground: #2d2926;
   --primary: #d8c7a3;
   --primary-foreground: #2d2926;

@@ -309,3 +309,187 @@ Import trace:
 [12:46:34.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [13:08:00.172] Server  LOG     ✓ Compiled in 49ms
 [13:08:13.070] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:30:53.801] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:38:22.416] Server  LOG     ✓ Compiled in 41ms
+[24:38:22.514] Server  LOG     ✓ Compiled in 38ms
+[24:38:23.490] Server  LOG     ✓ Compiled in 296ms
+[24:38:50.863] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[37:07:54.068] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `:` at line 30 column 5
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `:` at line 30 column 5
+    at [2]
+      26 |   {
+      27 |     "id": "2",
+      28 |     "company": "Schneider Electric",
+      29 |     ""
+         |     v
+      30 +     "role": "Software Intern - Victoria, BC",
+         |     ^
+      31 |     "period": "April - August, 2023",
+      32 |     "achievements": [
+      33 |       "Developed an electrical monitoring app using .NET, ensuring the safety of client facilities by delivering metric reports and alerts",
+      34 |       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[37:09:44.067] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `}` at line 52 column 5
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `}` at line 52 column 5
+    at [4].?
+      48 |   {
+      49 |     "id": "4",
+      50 |     "company": "Searchspring",
+      51 |     "link": ""
+         |     v
+      52 +     "role": "Internal Application Developer - Remote",
+         |     ^
+      53 |     "period": "March - August, 2021",
+      54 |     "achievements": [
+      55 |       "Developed an automated deployment system to streamline product releases using Go and Typescript, reducing deployment time by over 90%",
+      56 |       "Built an interactive Organization Chart using React and Chart JS, enhancing cross-team communication and increasing company-wide visibility of team structures"
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[37:09:45.066] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: expected `,` or `}` at line 52 column 5
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: expected `,` or `}` at line 52 column 5
+    at [4].?
+      48 |   {
+      49 |     "id": "4",
+      50 |     "company": "Searchspring",
+      51 |     "link": "https://athoscommerce.com/"
+         |     v
+      52 +     "role": "Internal Application Developer - Remote",
+         |     ^
+      53 |     "period": "March - August, 2021",
+      54 |     "achievements": [
+      55 |       "Developed an automated deployment system to streamline product releases using Go and Typescript, reducing deployment time by over 90%",
+      56 |       "Built an interactive Organization Chart using React and Chart JS, enhancing cross-team communication and increasing company-wide visibility of team structures"
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[42:33:02.149] Server  LOG     ✓ Compiled in 130ms
+[42:33:09.414] Server  LOG     ✓ Compiled in 74ms
+[42:33:13.570] Server  LOG     ✓ Compiled in 74ms
+[42:34:01.083] Server  LOG     ✓ Compiled in 93ms
+[42:34:20.319] Server  LOG     ✓ Compiled in 92ms
+[42:34:27.814] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[42:34:59.693] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[42:35:11.187] Server  LOG     ✓ Compiled in 96ms
+[42:35:27.116] Server  LOG     ✓ Compiled in 58ms
+[42:35:54.370] Server  LOG     ✓ Compiled in 67ms
+[42:46:40.853] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 33 column 36
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 33 column 36
+    at [2].skills
+      29 |     "company": "Chatterblock",
+      30 |     "link": "https://www.chatterblock.com/",
+      31 |     "role": "Web Developer Intern - Victoria, BC",
+      32 |     "period": "April - August, 2022",
+         |                                    v
+      33 +     "skills": ["Python", "Django", ],
+         |                                    ^
+      34 |     "achievements": [
+      35 |       "Designed and built an admin dashboard using Python Django that tracked and visualized user activities to provide data for more informed business decisions",
+      36 |       "Trained new developers through presentations, workshops and pair programming sessions to decrease their onboarding time"
+      37 |     ]
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[42:47:33.001] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 8 column 57
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 8 column 57
+    at [0].skills
+       4 |     "company": "Primer",
+       5 |     "link": "https://primer.com/",
+       6 |     "role": "Full Stack Software Intern - San Francisco, CA",
+       7 |     "period": "April- August, 2025",
+         |                                                         v
+       8 +     "skills": ["Next.js", "React Native", "TypeScript", ],
+         |                                                         ^
+       9 |     "achievements": [
+      10 |       "Took ownership of multiple 0-1 projects across frontend, backend and mobile domains built with Next.js and React Native",
+      11 |       "Shipped over 100,000 lines of code over the internship, releasing on a 2 week cycle to meet ambitious deadlines",
+      12 |       "Built an internal tooling platform to automate PDF filing for over 500 customers, reducing manual effort by 90%"
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx
+[42:47:34.323] Server  LOG     ✓ Compiled in 71ms
+[42:47:40.410] Browser ERROR   ./data/experience.json
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/data/experience.json (json)
+
+Caused by:
+- Unable to make a module from invalid JSON: trailing comma at line 8 column 68
+
+Debug info:
+- An error occurred while generating the chunk item [project]/data/experience.json (json)
+- Execution of <JsonChunkItem as EcmascriptChunkItem>::content failed
+- Unable to make a module from invalid JSON: trailing comma at line 8 column 68
+    at [0].skills
+       4 |     "company": "Primer",
+       5 |     "link": "https://primer.com/",
+       6 |     "role": "Full Stack Software Intern - San Francisco, CA",
+       7 |     "period": "April- August, 2025",
+         |                                                                    v
+       8 +     "skills": ["Next.js", "React Native", "TypeScript", "GraphQL", ],
+         |                                                                    ^
+       9 |     "achievements": [
+      10 |       "Took ownership of multiple 0-1 projects across frontend, backend and mobile domains built with Next.js and React Native",
+      11 |       "Shipped over 100,000 lines of code over the internship, releasing on a 2 week cycle to meet ambitious deadlines",
+      12 |       "Built an internal tooling platform to automate PDF filing for over 500 customers, reducing manual effort by 90%"
+
+Import trace:
+  Server Component:
+    ./data/experience.json
+    ./app/page.tsx

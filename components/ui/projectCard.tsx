@@ -22,9 +22,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="flex items-start justify-between gap-4 mb-4">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">
-            <span className="font-mono text-xs text-muted-foreground">
-              {String(index + 1).padStart(2, "0")}
-            </span>
             <h3 className="text-xl md:text-2xl">{project.title}</h3>
           </div>
           {project.subtitle && (

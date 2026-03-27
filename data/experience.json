@@ -1,20 +1,11 @@
 [
   {
     "id": "0",
-    "company": "UVic UAV Team",
-    "role": "Head of Software - Victoria, BC",
-    "period": "January 2025 - Present",
-    "achievements": [
-      "Managed a team of 5 developers to build flight software for a fire-fighting drone to navigate and extinguish fire targets",
-      "Developed a flight simulation system with Docker to emulate our drone's hardware, shortening our iteration cycle by 80% and reducing vehicle risk.",
-      "Reviewed 45 PRs, hosted weekly software meetings, and maintained our project management system, meeting all deadlines"
-    ]
-  },
-  {
-    "id": "1",
     "company": "Primer",
+    "link": "https://primer.com/",
     "role": "Full Stack Software Intern - San Francisco, CA",
     "period": "April- August, 2025",
+    "skills": ["Next.js", "React Native", "TypeScript", "GraphQL", "PostgreSQL", "Figma"],
     "achievements": [
       "Took ownership of multiple 0-1 projects across frontend, backend and mobile domains built with Next.js and React Native",
       "Shipped over 100,000 lines of code over the internship, releasing on a 2 week cycle to meet ambitious deadlines",
@@ -22,44 +13,51 @@
     ]
   },
   {
-    "id": "2",
+    "id": "1",
     "company": "Schneider Electric",
+    "link": "https://www.se.com/ca/en/product-range/65478-ecostruxure-power-advisor/#overview",
     "role": "Software Intern - Victoria, BC",
     "period": "April - August, 2023",
+    "skills": [".NET", "C#", "Jira"],
     "achievements": [
       "Developed an electrical monitoring app using .NET, ensuring the safety of client facilities by delivering metric reports and alerts",
       "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
     ]
   },
   {
-    "id": "3",
+    "id": "2",
     "company": "Chatterblock",
+    "link": "https://www.chatterblock.com/",
     "role": "Web Developer Intern - Victoria, BC",
     "period": "April - August, 2022",
+    "skills": ["Python", "Django", "PostgreSQL"],
     "achievements": [
       "Designed and built an admin dashboard using Python Django that tracked and visualized user activities to provide data for more informed business decisions",
       "Trained new developers through presentations, workshops and pair programming sessions to decrease their onboarding time"
     ]
   },
   {
-    "id": "4",
+    "id": "3",
     "company": "Searchspring",
+    "link": "https://athoscommerce.com/",
     "role": "Internal Application Developer - Remote",
     "period": "March - August, 2021",
+    "skills": ["Go", "TypeScript", "React"],
     "achievements": [
       "Developed an automated deployment system to streamline product releases using Go and Typescript, reducing deployment time by over 90%",
       "Built an interactive Organization Chart using React and Chart JS, enhancing cross-team communication and increasing company-wide visibility of team structures"
     ]
   },
   {
-    "id": "5",
+    "id": "4",
     "company": "Tesla",
+    "link": "https://www.tesla.com/en_ca",
     "role": "App Developer - Remote",
     "period": "September - December, 2020",
+    "skills": ["Angular", "Ionic", "C"],
     "achievements": [
       "Rebuilt a legacy design tool written in C into a modern desktop app using Angular and Ionic reducing cam design time by 90%",
       "Organized weekly meetings with Senior Engineers to review progress and provide feedback so the tool would meet the needs of the team"
     ]
   }
 ]
-
