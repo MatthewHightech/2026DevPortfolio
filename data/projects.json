@@ -3,7 +3,7 @@
     "id": "aerial-ops-platform",
     "title": "Autonomous Firefighting UAV",
     "subtitle": "Fire detection and navigation using computer vision ML models",
-    "description": "As the Head of Software for the UVic AERO Team, I've been leading a team of developers for the past year to design autonomous flight systems for wildfirefighting drones. These custom built vehicles run on a Raspberry Pi where we run trained computer vision models to detect fire targets and maneuver the drone to extinguish fires and collect data to analyze.",
+    "description": "As the Head of Software for the UVic AERO Team, I've been leading a team of developers for the past year to design autonomous flight systems for wildfire fighting drones. These custom built vehicles run on a Raspberry Pi where we run trained computer vision models to detect fire targets and maneuver the drone to extinguish fires and collect data to analyze.",
     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
     "liveUrl": "https://uvicaero.com/",
     "media": [
@@ -24,7 +24,7 @@
     "id": "ios-app",
     "title": "Pigment Paint Mixer (iOS App)",
     "subtitle": "Creative tooling for artists to mix and match paint colors",
-    "description": "A react native app for artists to take photos of a scene they wish to paint and then build a virtual palette of colors from the image. Each palette color is then broken down into it's fundamental colors (red, yellow, blue, white, black) for the arist to create a mix from.\n\nThe app was inspired by the first time I painted with my girlfriend and realized I have no idea what colors to mix to get the shade I wanted.",
+    "description": "A react native app for artists to take photos of a scene they wish to paint and then build a virtual palette of colors from the image. Each palette color is then broken down into it's fundamental colors (red, yellow, blue, white, black) for the arist to create a mix from.\n\nThe app was inspired by the first time I painted with my girlfriend and realized I have no idea what colors to mix to get the shade I wanted. The app was a great exercise for building a functional solution for a problem I faced and going through the full design, development and deployment of an ios app.",
     "techStack": ["React Native", "Nativewind", "SQLite", "Expo"],
     "githubUrl": "https://github.com/MatthewHightech/Pigment",
     "liveUrl": "https://apps.apple.com/us/app/pigment-paint-mixer/id6760786912",

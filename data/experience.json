@@ -7,7 +7,7 @@
     "achievements": [
       "Managed a team of 5 developers to build flight software for a fire-fighting drone to navigate and extinguish fire targets",
       "Developed a flight simulation system with Docker to emulate our drone's hardware, shortening our iteration cycle by 80% and reducing vehicle risk.",
-      "Reviewed 45 PRs, hosted weekly software meetings, and maintained our project managment system meeting all deadlines"
+      "Reviewed 45 PRs, hosted weekly software meetings, and maintained our project management system, meeting all deadlines"
     ]
   },
   {
@@ -37,7 +37,7 @@
     "role": "Web Developer Intern - Victoria, BC",
     "period": "April - August, 2022",
     "achievements": [
-      "Designed and built an admin dashboard using Python Django that tracked and visualizeduser activities to provide data for more informed business decisions",
+      "Designed and built an admin dashboard using Python Django that tracked and visualized user activities to provide data for more informed business decisions",
       "Trained new developers through presentations, workshops and pair programming sessions to decrease their onboarding time"
     ]
   },
