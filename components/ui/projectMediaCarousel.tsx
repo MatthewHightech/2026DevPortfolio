@@ -47,6 +47,19 @@ function sortYoutubeFirst(items: ProjectMediaItem[]): ProjectMediaItem[] {
   });
 }
 
+/** One photo slot width; YouTube / video spans two slots + gap (desktop only). */
+function slideOuterWidthPx(
+  item: ProjectMediaItem,
+  slotW: number,
+  visibleSlots: number,
+  gap: number
+): number {
+  if (visibleSlots <= 1 || slotW <= 0) return slotW;
+  const wide = item.type === "youtube" || item.type === "video";
+  if (wide) return 2 * slotW + gap;
+  return slotW;
+}
+
 function youtubeVideoId(link: string): string | null {
   try {
     const u = new URL(link);
@@ -134,19 +147,44 @@ export function ProjectMediaCarousel({ media }: { media: ProjectMediaItem[] }) {
 
   const visibleSlots = isMobile ? 1 : DESKTOP_VISIBLE_SLOTS;
 
-  const maxStart = Math.max(0, sorted.length - visibleSlots);
+  const layoutMetrics = useMemo(() => {
+    const n = sorted.length;
+    if (viewportW <= 0 || n === 0 || visibleSlots <= 0) {
+      return {
+        widths: [] as number[],
+        positions: [0] as number[],
+        totalTrackWidth: 0,
+        maxStart: 0,
+      };
+    }
+    const slotW =
+      (viewportW - (visibleSlots - 1) * GAP_PX) / visibleSlots;
+    const widths = sorted.map((item) =>
+      slideOuterWidthPx(item, slotW, visibleSlots, GAP_PX)
+    );
+    const positions: number[] = [0];
+    for (let k = 1; k < n; k++) {
+      positions[k] = positions[k - 1] + widths[k - 1] + GAP_PX;
+    }
+    const totalTrackWidth = positions[n - 1] + widths[n - 1];
+    let maxStart = 0;
+    if (totalTrackWidth > viewportW + 0.5) {
+      for (let s = 0; s < n; s++) {
+        if (positions[s] <= totalTrackWidth - viewportW + 0.5) {
+          maxStart = s;
+        }
+      }
+    }
+    return { widths, positions, totalTrackWidth, maxStart };
+  }, [sorted, viewportW, visibleSlots]);
+
+  const { widths, positions, maxStart } = layoutMetrics;
   const start = Math.min(startIndex, maxStart);
-  const canScroll = sorted.length > visibleSlots;
+  const canScroll = maxStart > 0;
   const showArrows = !isMobile && canScroll;
   const showSwipe = isMobile && sorted.length > 1;
 
-  const slideWidthPx =
-    viewportW > 0 && visibleSlots > 0
-      ? (viewportW - (visibleSlots - 1) * GAP_PX) / visibleSlots
-      : 0;
-
-  const trackX =
-    slideWidthPx > 0 ? -start * (slideWidthPx + GAP_PX) : 0;
+  const trackX = viewportW > 0 && positions.length > start ? -positions[start] : 0;
 
   useLayoutEffect(() => {
     const el = viewportRef.current;
@@ -158,18 +196,24 @@ export function ProjectMediaCarousel({ media }: { media: ProjectMediaItem[] }) {
   }, []);
 
   useEffect(() => {
-    setStartIndex((i) => Math.min(i, Math.max(0, sorted.length - visibleSlots)));
-  }, [sorted.length, visibleSlots]);
+    setStartIndex((i) => Math.min(i, maxStart));
+  }, [maxStart, sorted.length]);
 
   const goPrev = () => setStartIndex((i) => Math.max(0, i - 1));
   const goNext = () => setStartIndex((i) => Math.min(maxStart, i + 1));
 
   const goToIndex = (i: number) => {
-    const target = Math.max(
-      0,
-      Math.min(i - visibleSlots + 1, maxStart)
-    );
-    setStartIndex(target);
+    if (viewportW <= 0 || widths.length === 0) return;
+    const viewW = viewportW;
+    for (let s = 0; s <= maxStart; s++) {
+      const left = positions[s];
+      const right = left + viewW;
+      if (positions[i] < right && positions[i] + widths[i] > left) {
+        setStartIndex(s);
+        return;
+      }
+    }
+    setStartIndex(maxStart);
   };
 
   const onTouchStart = (e: ReactTouchEvent) => {
@@ -229,9 +273,8 @@ export function ProjectMediaCarousel({ media }: { media: ProjectMediaItem[] }) {
                 className="h-full shrink-0"
                 style={{
                   width:
-                    slideWidthPx > 0
-                      ? slideWidthPx
-                      : `min(100%, ${SLIDE_MIN_WIDTH_PX}px)`,
+                    widths[i] ??
+                    `min(100%, ${SLIDE_MIN_WIDTH_PX}px)`,
                 }}
                 aria-roledescription="slide"
                 aria-label={`${i + 1} of ${sorted.length}`}
@@ -260,8 +303,13 @@ export function ProjectMediaCarousel({ media }: { media: ProjectMediaItem[] }) {
         aria-label="Media position"
       >
         {sorted.map((_, i) => {
+          const viewLeft = positions[start] ?? 0;
+          const viewRight = viewLeft + viewportW;
           const inView =
-            i >= start && i < start + visibleSlots;
+            viewportW > 0 &&
+            widths[i] !== undefined &&
+            positions[i] + widths[i] > viewLeft + 0.5 &&
+            positions[i] < viewRight - 0.5;
           return (
             <button
               key={i}

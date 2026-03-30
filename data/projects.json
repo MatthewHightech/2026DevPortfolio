@@ -8,6 +8,11 @@
     "liveUrl": "https://uvicaero.com/",
     "media": [
       {
+        "type": "youtube",
+        "link": "https://youtu.be/wn7DbP791qk",
+        "alt": "Autonomous Firefighting UAV"
+      },
+      {
         "type": "image",
         "link": "/images/Aero/aero_1.jpg",
         "alt": "Ground control station and drone"

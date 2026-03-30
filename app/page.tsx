@@ -126,7 +126,7 @@ export default function Home() {
       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto">
         <div className="max-w-2xl">
           <p className="text-lg mb-4 leading-relaxed">
-            Always happy to chat and looking to join a motivated software team in the Victoria area in October 2026!
+            Always happy to chat and looking to join a motivated software team in the Victoria area for October 2026!
           </p>
 
           <div className="space-y-4 mb-16">
