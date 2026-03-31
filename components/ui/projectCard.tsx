@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Github } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 import type projects from "@/data/projects.json";
 import {
   ProjectMediaCarousel,
@@ -9,7 +9,10 @@ import {
 type Project = (typeof projects)[number];
 
 const linkButtonClass =
-  "inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm text-muted-foreground transition-colors hover:border-accent hover:bg-muted hover:text-accent";
+  "inline-flex cursor-pointer items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:bg-muted hover:text-accent hover:shadow-md active:translate-y-0 active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-card";
+
+const appStoreLinkClass =
+  "inline-flex cursor-pointer items-center rounded-md border border-border bg-card p-2 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-md active:translate-y-0 active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-card";
 
 interface ProjectCardProps {
   project: Project;
@@ -52,7 +55,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+      <div className="flex flex-wrap gap-4">
         {project.githubUrl && (
           <a
             href={project.githubUrl}
@@ -70,11 +73,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center hover:opacity-90 transition-opacity"
+              aria-label="Download on the App Store (opens in new tab)"
             >
               <Image
                 src="/images/ios.svg"
-                alt="Download on the App Store"
+                alt=""
                 width={90}
                 height={30}
                 className="h-9 w-auto"
@@ -87,6 +90,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               rel="noopener noreferrer"
               className={linkButtonClass}
             >
+              <Globe className="size-4 shrink-0" aria-hidden />
               <span>Team Website</span>
             </a>
           ))}
