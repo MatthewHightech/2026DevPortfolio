@@ -90,7 +90,7 @@ export default function Home() {
                 </p>
               </div>
               <p>
-                I have a very board approach to engineering. I've determined that the more I can learn, the more data I have to inform my decisions and the easier it is to learn new things. My pursuit of guitar,{" "}
+                I have a very board approach to engineering. I've determined that the more I can explore, the more data I have to inform my decisions and the easier it is to learn new things. My pursuit of guitar,{" "}
                 <a
                   href="https://tovproductions.ca/video"
                   target="_blank"
