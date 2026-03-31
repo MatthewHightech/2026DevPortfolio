@@ -63,3 +63,5 @@ Parsing ecmascript source code failed
   79 |
 
 Expected '</', got 'jsx text'
+[20:58:20.691] Server  LOG     ✓ Compiled in 108ms
+[20:58:34.787] Server  LOG     ✓ Compiled in 29ms

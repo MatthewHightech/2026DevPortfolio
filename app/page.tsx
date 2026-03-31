@@ -99,8 +99,8 @@ export default function Home() {
                 >
                   cinematography
                 </a>
-                , surfing and woodworking have all helped me become a better engineer.
-                I'm constantly learning how to learn better.
+                , surfing and woodworking have all helped me become a more effective engineer.
+                I'm constantly learning how to learn.
               </p>
             </div>
         </div>
