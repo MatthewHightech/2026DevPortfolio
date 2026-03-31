@@ -70,14 +70,27 @@ export default function Home() {
             </div>
             
 
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl">
-              Full Stack Software Engineer. Love leading teams and being led by others. Believer in people and technology.
-            </p>
+            <div className="text-xl md:text-2xl mb-8 max-w-2xl">
+              <p>Full Stack Software Engineer.</p>
+              <p>Love leading teams and being led by others.</p>
+            </div>
 
             <div className="max-w-2xl space-y-4 leading-relaxed">
+              <div className="">
+                <p className="m-0">I value ownership, accountability and trust.</p>
+                <p className="m-0">I value measuring twice and cutting once.</p>
+                <p className="m-0">I value failing fast.</p>
+                <p className="m-0">I value calculated risks.</p>
+                <p className="m-0">
+                  I value simplicity as a default and complexity when necessary.
+                </p>
+                <p className="m-0">
+                  I value questioning everything, knowing when to make a decision and
+                  maintaining the ability to adapt.
+                </p>
+              </div>
               <p>
-                I have a very board approach to engineering. The more I can learn and expose myself to, the more data points I have to
-                make decisions with. I learned guitar,{" "}
+                I have a very board approach to engineering. I've determined that the more I can learn, the more data I have to inform my decisions and the easier it is to learn new things. My pursuit of guitar,{" "}
                 <a
                   href="https://tovproductions.ca/video"
                   target="_blank"
@@ -86,15 +99,8 @@ export default function Home() {
                 >
                   cinematography
                 </a>
-                , surfing and woodworking to become a better engineer.
+                , surfing and woodworking have all helped me become a better engineer.
                 I'm constantly learning how to learn better.
-              </p>
-              <p>
-              And I love it.
-              </p>
-              <p>
-                I value ownership, accountability and trust. I value measuring twice and cutting once. I value failing fast. I value calculated
-                risks. I value simplicity as a default and complexity when necessary. I value questioning everything, knowing when to make a decision and maintaining the ability to adapt.
               </p>
             </div>
         </div>

@@ -49,3 +49,17 @@ Import trace:
 [00:05:38.810] Server  LOG     ✓ Compiled in 30ms
 [00:05:56.333] Server  LOG     ✓ Compiled in 28ms
 [00:06:41.975] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:57:40.464] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[09:05:14.081] Browser ERROR   ./app/page.tsx:75:17
+Parsing ecmascript source code failed
+  73 |             <div className="text-xl md:text-2xl mb-8 max-w-2xl">
+  74 |               Full Stack Software Engineer.
+> 75 |             </p>
+     |                 ^
+> 76 |             <p className="text-xl md:text-2xl mb-8 max-w-2xl">
+     | ^^^^^^^^^^^^^
+  77 |               Love leading teams and being led by others.
+  78 |             </p>
+  79 |
+
+Expected '</', got 'jsx text'

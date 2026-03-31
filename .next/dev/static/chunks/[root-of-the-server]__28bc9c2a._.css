@@ -1017,6 +1017,10 @@
     margin: calc(var(--spacing) * -1.5);
   }
 
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
+
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
@@ -5082,6 +5086,13 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:font-medium {
       --tw-font-weight: var(--font-weight-medium);
       font-weight: var(--font-weight-medium);
@@ -6845,7 +6856,7 @@
     --secondary-foreground: #fffbf0;
     --muted: #4a453f;
     --muted-foreground: #a39e96;
-    --accent: #32649a;
+    --accent: #7baadc;
     --accent-foreground: #fff;
     --border: #4a453f;
   }
