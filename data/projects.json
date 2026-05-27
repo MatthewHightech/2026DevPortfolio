@@ -21,6 +21,21 @@
         "type": "image",
         "link": "/images/Aero/aero_2.jpg",
         "alt": "Ground control station"
+      },
+      {
+        "type": "image",
+        "link": "/images/Aero/aero_3.jpg",
+        "alt": "Drone in flight"
+      },
+      {
+        "type": "image",
+        "link": "/images/Aero/aero_4.jpg",
+        "alt": "Drone in flight"
+      },
+      {
+        "type": "image",
+        "link": "/images/Aero/aero_5.jpg",
+        "alt": "Drone in flight"
       }
     ],
     "featured": true
@@ -58,6 +73,11 @@
         "type": "image",
         "link": "/images/Pigment/pigment_5.png",
         "alt": "Color mixing"
+      },
+      {
+        "type": "image",
+        "link": "/images/Pigment/pigment_6.png",
+        "alt": "Empty Home"
       }
     ],
     "featured": false
