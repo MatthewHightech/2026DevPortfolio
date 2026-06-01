@@ -22,8 +22,8 @@ export default function Home() {
       {/* About Section */}
       <section className="flex items-center px-6 py-8 md:px-12 lg:px-16 max-w-6xl mx-auto relative">
         <div className="w-full py-4">
-            <SectionLabel index="001" label="About" />
-
+          <SectionLabel index="001" label="About" />
+          <article className="border border-border p-6 bg-card transition-colors">
             <div className="flex flex-col gap-6 flex-row items-center justify-left pb-6">
               <div className="shrink-0">
                 <div className="relative h-32 w-32 rounded-2xl border border-border bg-card overflow-hidden">
@@ -103,6 +103,7 @@ export default function Home() {
                 I'm constantly learning how to learn.
               </p>
             </div>
+          </article>
         </div>
       </section>
 
