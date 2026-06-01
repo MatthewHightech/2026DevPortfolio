@@ -9,7 +9,7 @@
     "media": [
       {
         "type": "youtube",
-        "link": "https://youtu.be/wn7DbP791qk",
+        "link": "https://youtu.be/EA-joUs4kxk?si=Iwi6d2nUfj8bIV4b",
         "alt": "Autonomous Firefighting UAV"
       },
       {
@@ -21,6 +21,11 @@
         "type": "image",
         "link": "/images/Aero/aero_2.jpg",
         "alt": "Ground control station"
+      },
+      {
+        "type": "image",
+        "link": "/images/Aero/aero_3.jpg",
+        "alt": "Drone in flight"
       },
       {
         "type": "image",
