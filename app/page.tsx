@@ -72,7 +72,7 @@ export default function Home() {
             
 
             <div className="text-xl md:text-2xl mb-8 max-w-2xl">
-              <p>Full Stack Software Engineer.</p>
+              <p>Software Generalist.</p>
               <p>Love leading teams and being led by others.</p>
             </div>
 
@@ -103,6 +103,8 @@ export default function Home() {
                 , surfing and woodworking have all helped me become a more effective engineer.
                 I'm constantly learning how to learn.
               </p>
+              <p>My view of engineering considers the personal and technical, the people and the product.</p>
+              <p>I have a deep desire to connect. Whoever you are. I can't wait to hear from you.</p>
             </div>
           </article>
         </div>

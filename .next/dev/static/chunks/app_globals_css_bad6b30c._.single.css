@@ -5035,6 +5035,13 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:font-medium {
       --tw-font-weight: var(--font-weight-medium);
       font-weight: var(--font-weight-medium);
