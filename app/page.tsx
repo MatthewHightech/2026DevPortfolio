@@ -31,6 +31,7 @@ export default function Home() {
                     src="/images/Profile.png"
                     alt="Portrait of Matt Smith"
                     fill
+                    priority
                     sizes="128px"
                     className="object-cover origin-center"
                   />

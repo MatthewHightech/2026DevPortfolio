@@ -129,6 +129,7 @@ function MediaSlide({ item }: { item: ProjectMediaItem }) {
         src={item.link}
         alt={item.alt}
         fill
+        loading="lazy"
         sizes="(max-width: 768px) 100vw, 25vw"
         className="object-cover object-top"
       />

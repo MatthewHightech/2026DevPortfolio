@@ -1,15 +1,9 @@
-[00:00:00.847] Server  LOG     ✓ Ready in 676ms
-[00:01:11.407] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:34.984] Browser ERROR   ./app/page.tsx:107:15
-Parsing ecmascript source code failed
-  105 |               </p>
-  106 |             </div>
-> 107 |         </div>
-      |               ^
-> 108 |       </section>
-      | ^^^^^^^
-  109 |
-  110 |       {/* Projects Section */}
-  111 |       <section className="px-6 md:px-12 lg:px-16 py-8 max-w-6xl mx-auto relative">
-
-Expected '</', got 'jsx text'
+[00:00:00.581] Server  LOG     ✓ Ready in 439ms
+[00:00:01.548] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.134] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:50.712] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:02.208] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:07.416] Browser WARN    Image with src "/images/Aero/aero_1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:08.939] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:09.857] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
