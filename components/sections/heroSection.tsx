@@ -46,7 +46,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="text-headline-md mb-12 text-muted-foreground"
+            className="text-headline-md mb-2 text-muted-foreground"
             initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -55,6 +55,18 @@ export function HeroSection() {
             }}
           >
             Software Generalist
+          </motion.p>
+
+          <motion.p
+            className="text-mono-meta mb-12 text-muted-foreground"
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: prefersReducedMotion ? 0 : 0.45,
+              delay: prefersReducedMotion ? 0 : 0.14,
+            }}
+          >
+            UVic Software Engineering Grad 2026
           </motion.p>
 
           <motion.div
