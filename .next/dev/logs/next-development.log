@@ -1,3 +1,90 @@
-[00:00:01.061] Server  LOG     ✓ Ready in 875ms
-[00:00:01.982] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:21.050] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.625] Server  LOG     ✓ Ready in 408ms
+[00:00:02.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:48.648] Server  LOG     ✓ Compiled in 86ms
+[00:03:00.753] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:00.937] Browser WARN    Image with src "/images/Pigment/pigment_1.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:06:20.177] Server  LOG     ✓ Compiled in 39ms
+[00:06:45.770] Server  LOG     ✓ Compiled in 65ms
+[00:06:45.852] Browser WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:06:47.009] Server  LOG     ✓ Compiled in 59ms
+[00:35:10.264] Server  WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:35:10.395] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:10.508] Browser WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:36:13.602] Server  LOG     ✓ Compiled in 55ms
+[00:39:11.828] Server  LOG     ✓ Compiled in 62ms
+[00:39:15.573] Server  LOG     ✓ Compiled in 61ms
+[00:39:15.650] Browser WARN    Image with src "/images/Aero/aero_5.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:39:18.168] Server  LOG     ✓ Compiled in 33ms
+[00:39:28.584] Server  LOG     ✓ Compiled in 36ms
+[00:40:14.234] Server  LOG     ✓ Compiled in 26ms
+[00:40:15.280] Server  LOG     ✓ Compiled in 28ms
+[00:40:16.743] Server  LOG     ✓ Compiled in 19ms
+[00:40:18.480] Server  LOG     ✓ Compiled in 30ms
+[00:40:19.364] Server  LOG     ✓ Compiled in 27ms
+[00:40:41.200] Browser WARN    Image with src "/images/Aero/aero_4.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:40:44.431] Browser WARN    Image with src "/images/Aero/aero_3.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:40:46.882] Browser WARN    Image with src "/images/Aero/aero_2.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:40:49.065] Browser WARN    Image with src "/images/Aero/aero_1.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:40:54.609] Browser WARN    Image with src "/images/Pigment/pigment_6.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:40:56.415] Browser WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:42:25.175] Server  LOG     ✓ Compiled in 63ms
+[00:42:30.266] Server  LOG     ✓ Compiled in 28ms
+[00:42:44.571] Server  LOG     ✓ Compiled in 34ms
+[00:43:02.531] Server  LOG     ✓ Compiled in 30ms
+[00:45:12.381] Server  WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:12.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:12.620] Browser WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:16.164] Browser WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:17.112] Browser WARN    Image with src "/images/Pigment/pigment_3.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:18.363] Browser WARN    Image with src "/images/Pigment/pigment_4.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:19.562] Browser WARN    Image with src "/images/Pigment/pigment_5.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:20.596] Browser WARN    Image with src "/images/Pigment/pigment_6.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:29.196] Browser WARN    Image with src "/images/Aero/aero_1.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:31.145] Browser WARN    Image with src "/images/Aero/aero_2.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:34.780] Browser WARN    Image with src "/images/Aero/aero_3.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:35.785] Browser WARN    Image with src "/images/Aero/aero_4.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:45:36.769] Browser WARN    Image with src "/images/Aero/aero_5.jpg" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:47:35.657] Server  LOG     ✓ Compiled in 90ms
+[00:47:51.814] Server  LOG     ✓ Compiled in 59ms
+[00:50:15.005] Server  LOG     ✓ Compiled in 39ms
+[00:50:20.564] Server  LOG     ✓ Compiled in 29ms
+[00:55:18.827] Server  LOG     ✓ Compiled in 41ms
+[00:55:31.159] Server  LOG     ✓ Compiled in 33ms
+[00:55:32.212] Server  LOG     ✓ Compiled in 29ms
+[00:55:33.285] Server  LOG     ✓ Compiled in 33ms
+[00:55:35.634] Server  LOG     ✓ Compiled in 34ms
+[00:57:14.306] Server  LOG     ✓ Compiled in 96ms
+[00:57:15.489] Server  LOG     ✓ Compiled in 66ms
+[00:57:16.772] Server  LOG     ✓ Compiled in 62ms
+[00:57:16.840] Server  LOG     ✓ Compiled in 66ms
+[00:57:17.017] Server  LOG     ✓ Compiled in 68ms
+[00:57:18.233] Server  LOG     ✓ Compiled in 54ms
+[00:57:23.724] Server  LOG     ✓ Compiled in 98ms
+[01:00:37.486] Server  WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:00:37.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:37.773] Browser WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:01:15.540] Server  LOG     ✓ Compiled in 116ms
+[01:02:05.180] Server  LOG     ✓ Compiled in 68ms
+[01:02:34.340] Browser WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:02:38.490] Browser WARN    Image with src "/images/Pigment/pigment_3.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:02:41.423] Browser WARN    Image with src "/images/Pigment/pigment_4.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:03:02.704] Server  LOG     ✓ Compiled in 40ms
+[01:03:05.583] Server  LOG     ✓ Compiled in 28ms
+[01:08:29.394] Server  LOG     ✓ Compiled in 56ms
+[01:08:41.423] Server  LOG     ✓ Compiled in 30ms
+[01:10:41.268] Server  LOG       Reload env: .env.local
+[01:11:19.328] Server  LOG       Reload env: .env.local
+[01:11:22.733] Server  LOG       Reload env: .env.local
+[01:11:24.817] Server  LOG       Reload env: .env.local
+[01:11:35.869] Server  LOG       Reload env: .env.local
+[01:12:43.872] Server  WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:12:44.042] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:12:44.169] Browser WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:17:23.393] Server  LOG     ✓ Compiled in 47ms
+[01:17:50.167] Browser WARN    Image with src "/images/Pigment/pigment_1.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:17:50.834] Browser WARN    Image with src "/images/Pigment/pigment_3.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:17:51.517] Browser WARN    Image with src "/images/Pigment/pigment_4.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:18:16.349] Server  WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[01:18:16.444] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:16.563] Browser WARN    Image with src "/images/Pigment/pigment_2.png" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.

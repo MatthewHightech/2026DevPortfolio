@@ -3,7 +3,7 @@
     "id": "aerial-ops-platform",
     "title": "Autonomous Firefighting UAV",
     "subtitle": "Fire detection and navigation using computer vision ML models",
-    "description": "As Head of Software for the UVic AERO team, I lead a team of 5 developers building flight software that operates our wildfire-response drone to find, navigate, and extinguish fires while collecting data for analysis. The vehicle uses a YOLO-based computer vision model that we trained and operates on a Raspberry Pi to spot fires and guide the vehicle. A big project this year was building a Dockerized flight simulator that mirrors our hardware in containers, which cut our iteration cycle by about 80% and lets us test without risking the damage to the vehicle. As the team lead, I run weekly software meetings, pair-program with the members, review all pull requests, and keep our project management process on track.",
+    "description": "As Head of Software for the UVic AERO team, I lead a team of 5 developers building flight software that operates our wildfire-response drone to find, navigate, and extinguish fires while collecting data for analysis. The vehicle uses a YOLO-based computer vision model that we trained and operates on a Raspberry Pi to spot fires and guide the vehicle. As the team lead, I run weekly software meetings, pair-program with the members, review all pull requests, and keep our project management process on track.",
     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
     "liveUrl": "https://uvicaero.com/",
     "media": [
@@ -44,19 +44,19 @@
     "id": "ios-app",
     "title": "Pigment Paint Mixer (iOS App)",
     "subtitle": "Creative tooling for artists to mix and match paint colors",
-    "description": "A react native app for artists to take photos of a scene they wish to paint and then build a virtual palette of colors from the image. Each palette color is then broken down into it's fundamental colors (red, yellow, blue, white, black) for the artist to blend into their desired color. The app was inspired by the first time I painted with my girlfriend and realized I have no idea what colors to mix to get the shade I wanted. The app was a great exercise for building a functional solution for a problem I faced and going through the full design, development and deployment of an ios app.",
+    "description": "A react native app for artists to take photos of a scene they wish to paint and then build a virtual palette of colors from the image. Each palette color is then broken down into it's fundamental colors (red, yellow, blue, white, black) for the artist to blend into their desired color. The app was a great exercise for building a functional solution for a problem I faced and going through the full design, development and deployment of an ios app.",
     "techStack": ["React Native", "Nativewind", "SQLite", "Expo"],
     "githubUrl": "https://github.com/MatthewHightech/Pigment",
     "liveUrl": "https://apps.apple.com/us/app/pigment-paint-mixer/id6760786912",
     "media": [
       {
         "type": "image",
-        "link": "/images/Pigment/pigment_1.png",
+        "link": "/images/Pigment/pigment_2.png",
         "alt": "Walkthrough of Pigment app"
       },
       {
         "type": "image",
-        "link": "/images/Pigment/pigment_2.png",
+        "link": "/images/Pigment/pigment_1.png",
         "alt": "First project of Pigment app"
       },
       {

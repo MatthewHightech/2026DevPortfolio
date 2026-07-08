@@ -1,19 +1,14 @@
 export type SectionLabelProps = {
-    index: string;
-    label: string;
-  };
-  
-  export function SectionLabel({ index, label }: SectionLabelProps) {
-    return (
-      <div className="mb-8">
-        <div className="flex items-center gap-2">
-          <div className="font-mono text-xs text-accent border border-accent px-3 py-1">
-            {index}
-          </div>
-          <div className="font-mono text-xs text-muted-foreground uppercase">
-            {label}
-          </div>
-        </div>
-      </div>
-      );
-  }
+  section: string;
+  label: string;
+};
+
+export function SectionLabel({ section, label }: SectionLabelProps) {
+  return (
+    <div className="mb-14">
+      <p className="font-mono text-[0.8rem] font-normal tracking-[0.16em] text-foreground md:text-sm">
+        [{section} // {label}]
+      </p>
+    </div>
+  );
+}

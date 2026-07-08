@@ -1,74 +1,118 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff4e5;
-  --foreground: #2d2926;
+  --background: #fbf9f4;
+  --foreground: #1b1c19;
 
-  --card: #fcf8ef;
-  --card-foreground: #2d2926;
+  --surface: #fbf9f4;
+  --surface-container: #f0eee9;
+  --surface-container-high: #eae8e3;
+  --surface-variant: #e4e2dd;
 
-  --primary: #d8c7a3;
-  --primary-foreground: #2d2926;
+  --primary: #061810;
+  --on-primary: #ffffff;
+  --primary-container: #1b2d24;
 
-  --secondary: #fffbf0;
-  --secondary-foreground: #2d2926;
+  --secondary: #914b33;
+  --on-secondary: #ffffff;
+  --secondary-container: #ffa588;
 
-  --muted: #f4f1ea;
-  --muted-foreground: #6c665e;
+  --tertiary: #0c161a;
+  --on-tertiary-container: #879296;
 
-  --accent: #32649a;
+  --muted: #f0eee9;
+  --muted-foreground: #424844;
+
+  --accent: #914b33;
   --accent-foreground: #ffffff;
 
-  --border: #e6e0d3;
-}
+  --outline: #737874;
+  --outline-variant: #c2c8c2;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #2d2926;
-    --foreground: #fffbf0;
-
-    --card: #3a352f;
-    --card-foreground: #fffbf0;
-
-    --primary: #d8c7a3;
-    --primary-foreground: #2d2926;
-
-    --secondary: #4a453f;
-    --secondary-foreground: #fffbf0;
-
-    --muted: #4a453f;
-    --muted-foreground: #a39e96;
-
-    --accent: #7baadc;
-    --accent-foreground: #ffffff;
-
-    --border: #4a453f;
-  }
+  --border: #c2c8c2;
+  --error: #ba1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-variant: var(--surface-variant);
   --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
   --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary-container: var(--on-tertiary-container);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
   --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-error: var(--error);
+  --font-sans: var(--font-hanken);
+  --font-mono: var(--font-jetbrains);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-hanken), system-ui, sans-serif;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  background: color-mix(in srgb, var(--secondary) 22%, transparent);
+}
+
+@layer utilities {
+  .text-display-lg {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .text-headline-md {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .text-mono-meta {
+    font-family: var(--font-jetbrains), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .section-gap {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+
+  .page-margin {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .page-margin {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
 }
