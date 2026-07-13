@@ -57,7 +57,13 @@ export function ExperienceSection() {
 
                 <ul className="space-y-3 text-body-lg leading-relaxed text-muted-foreground">
                   {item.achievements.map((achievement) => (
-                    <li key={achievement}>{achievement}</li>
+                    <li key={achievement} className="flex gap-3">
+                      <span
+                        className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-muted-foreground"
+                        aria-hidden
+                      />
+                      <span>{achievement}</span>
+                    </li>
                   ))}
                 </ul>
               </article>
