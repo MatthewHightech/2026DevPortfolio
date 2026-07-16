@@ -6,12 +6,18 @@ const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hanken",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "700"],
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500"],
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

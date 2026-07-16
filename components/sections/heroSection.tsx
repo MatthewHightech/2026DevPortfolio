@@ -25,7 +25,7 @@ export function HeroSection() {
                 alt="Portrait of Matt Smith"
                 fill
                 priority
-                unoptimized
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 280px, 320px"
                 className="object-cover object-center"
               />

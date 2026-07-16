@@ -9,15 +9,35 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: isDev ? 0 : 60 * 60 * 24 * 30,
   },
   async headers() {
+    const longCache = isDev
+      ? "no-cache"
+      : "public, max-age=31536000, immutable";
+
     return [
       {
         source: "/images/:path*",
         headers: [
           {
             key: "Cache-Control",
-            value: isDev
-              ? "no-cache"
-              : "public, max-age=2592000, stale-while-revalidate=86400",
+            value: longCache,
+          },
+        ],
+      },
+      {
+        source: "/_next/image",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: longCache,
+          },
+        ],
+      },
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: longCache,
           },
         ],
       },
