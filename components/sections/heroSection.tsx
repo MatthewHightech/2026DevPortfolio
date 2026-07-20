@@ -106,12 +106,7 @@ export function HeroSection() {
               effective engineer. I&apos;m constantly learning how to learn.
             </p>
             <p>
-              My view of engineering considers the personal and technical, the
-              people and the product.
-            </p>
-            <p>
-              I have a deep desire to connect. Whoever you are. I can&apos;t wait
-              to hear from you.
+              I'm in the pursuit of building tools that people genuinely love using, and deliver value to communities through education, safety, organization, and improved health.
             </p>
           </motion.div>
         </div>
