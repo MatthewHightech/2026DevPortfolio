@@ -5,7 +5,10 @@
     "subtitle": "Fire detection and navigation using computer vision ML models",
     "description": "As Head of Software for the UVic AERO team, I lead a team of 5 developers building flight software that operates our wildfire-response drone to find, navigate, and extinguish fires while collecting data for analysis. The vehicle uses a YOLO-based computer vision model that we trained and operates on a Raspberry Pi to spot fires and guide the vehicle. As the team lead, I run weekly software meetings, pair-program with the members, review all pull requests, and keep our project management process on track.",
     "techStack": ["Python", "OpenCV", "Ardupilot", "Docker", "Raspberry Pi"],
-    "liveUrl": "https://uvicaero.com/",
+    "liveUrl": {
+      "text": "Team Website",
+      "link": "https://uvicaero.com/"
+    },
     "media": [
       {
         "type": "youtube",
@@ -47,7 +50,10 @@
     "description": "After wrestling with scattered lists, spreadsheets and apps, I decided to build an all-in-one life management platform for my family to help us stay organized and maintain maximum visibility over our lives. This web app lets our whole family track and assign tasks, manage budget plans, meal prep and more, with the idea to build in new features as we need them. This was the perfect project to develop my full stack skills as I designed and built the UI, API, database, and hosting setup myself. Currently working on a mobile app to bring extended features and hope to release it early fall 2026.",
     "techStack": ["Next.js", "GraphQL" ,"Postgres", "Tailwind", "Docker", "Oracle"],
     "githubUrl": "https://github.com/MatthewHightech/life_management",
-    "liveUrl": "https://life.mattsmith.sh/",
+    "liveUrl": {
+      "text": "Live Site",
+      "link": "https://life.mattsmith.sh/"
+    },
     "media": [
       {
         "type": "image",
@@ -79,7 +85,10 @@
     "description": "A react native app for artists to take photos of a scene they wish to paint and then build a virtual palette of colors from the image. Each palette color is then broken down into it's fundamental colors (red, yellow, blue, white, black) for the artist to blend into their desired color. The app was a great exercise for building a functional solution for a problem I faced and going through the full design, development and deployment of an ios app.",
     "techStack": ["React Native", "Nativewind", "SQLite", "Expo"],
     "githubUrl": "https://github.com/MatthewHightech/Pigment",
-    "liveUrl": "https://apps.apple.com/us/app/pigment-paint-mixer/id6760786912",
+    "liveUrl": {
+      "text": "App Store",
+      "link": "https://apps.apple.com/us/app/pigment-paint-mixer/id6760786912"
+    },
     "media": [
       {
         "type": "image",

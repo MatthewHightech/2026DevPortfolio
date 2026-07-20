@@ -114,26 +114,22 @@ export function ProjectModule({ project, index }: ProjectModuleProps) {
 
       <div className="flex flex-wrap gap-3">
         {project.githubUrl && (
-          <TectonicButton href={project.githubUrl} external>
+          <TectonicButton href={project.githubUrl} external variant="primary">
             <Github className="size-3.5" aria-hidden />
             GitHub
           </TectonicButton>
         )}
-        {project.liveUrl &&
-          (project.id.includes("ios-app") ? (
-            <TectonicButton
-              href={project.liveUrl}
-              external
-              ariaLabel="Download on the App Store"
-            >
-              App Store
-            </TectonicButton>
-          ) : (
-            <TectonicButton href={project.liveUrl} external>
-              <Globe className="size-3.5" aria-hidden />
-              Team Website
-            </TectonicButton>
-          ))}
+        {project.liveUrl && (
+          <TectonicButton
+            href={project.liveUrl.link}
+            external
+            variant="primary"
+            ariaLabel={project.liveUrl.text}
+          >
+            <Globe className="size-3.5" aria-hidden />
+            {project.liveUrl.text}
+          </TectonicButton>
+        )}
       </div>
     </div>
   );
