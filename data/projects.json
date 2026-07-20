@@ -41,6 +41,38 @@
     "featured": true
   },
   {
+    "id": "life-management",
+    "title": "Life Manager Web App",
+    "subtitle": "Full stack web app for managing tasks, finances, meals for family life",
+    "description": "After wrestling with scattered lists, spreadsheets and apps, I decided to build an all-in-one life management platform for my family to help us stay organized and maintain maximum visibility over our lives. This web app lets our whole family track and assign tasks, manage budget plans, meal prep and more, with the idea to build in new features as we need them. This was the perfect project to develop my full stack skills as I designed and built the UI, API, database, and hosting setup myself. Currently working on a mobile app to bring extended features and hope to release it early fall 2026.",
+    "techStack": ["Next.js", "GraphQL" ,"Postgres", "Tailwind", "Docker", "Oracle"],
+    "githubUrl": "https://github.com/MatthewHightech/life_management",
+    "liveUrl": "https://life.mattsmith.sh/",
+    "media": [
+      {
+        "type": "image",
+        "link": "/images/Life/life_1.png",
+        "alt": "Life Manager Web Tool"
+      },
+      {
+        "type": "image",
+        "link": "/images/Life/life_2.png",
+        "alt": "Life Manager Web Tool"
+      },
+      {
+        "type": "image",
+        "link": "/images/Life/life_3.png",
+        "alt": "Life Manager Web Tool"
+      },
+      {
+        "type": "image",
+        "link": "/images/Life/life_4.png",
+        "alt": "Life Manager Web Tool"
+      }
+    ],
+    "featured": true
+  },
+  {
     "id": "ios-app",
     "title": "Pigment Paint Mixer (iOS App)",
     "subtitle": "Creative tooling for artists to mix and match paint colors",
