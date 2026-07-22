@@ -3,10 +3,14 @@
 import Image from "next/image";
 import { useState } from "react";
 
+/** Shared with lightbox so prefetch and display hit the same optimized URLs. */
+export const PROJECT_IMAGE_SIZES = "(max-width: 1024px) 100vw, 896px";
+
 type ProjectImageProps = {
   src: string;
   alt: string;
   priority?: boolean;
+  loading?: "eager" | "lazy";
   /** CSS max-height value, e.g. `min(85dvh, 720px)` */
   maxHeight?: string;
   maxWidth?: string;
@@ -19,6 +23,7 @@ export function ProjectImage({
   src,
   alt,
   priority = false,
+  loading,
   maxHeight = "min(85dvh, 720px)",
   maxWidth,
   bordered = false,
@@ -40,12 +45,14 @@ export function ProjectImage({
         width={dims?.width ?? 1200}
         height={dims?.height ?? 900}
         priority={priority}
-        sizes="(max-width: 1024px) 100vw, 896px"
+        loading={priority ? undefined : loading}
+        sizes={PROJECT_IMAGE_SIZES}
         className={`h-auto w-auto max-w-full object-contain ${
           bordered ? "border border-outline-variant" : ""
         }`}
         style={{ maxHeight, maxWidth }}
-        onLoadingComplete={(img) => {
+        onLoad={(e) => {
+          const img = e.currentTarget;
           const next = {
             width: img.naturalWidth,
             height: img.naturalHeight,

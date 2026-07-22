@@ -15,6 +15,7 @@ const embedFrameClass =
 type MediaSlideProps = {
   item: ProjectMediaItem;
   priority?: boolean;
+  loading?: "eager" | "lazy";
   /** CSS max-height for images */
   imageMaxHeight?: string;
   /** `fill` expands to parent; `inline` shrink-wraps for lightbox click-through */
@@ -24,6 +25,7 @@ type MediaSlideProps = {
 export function MediaSlide({
   item,
   priority = false,
+  loading,
   imageMaxHeight = "min(85dvh, 720px)",
   layout = "fill",
 }: MediaSlideProps) {
@@ -98,6 +100,7 @@ export function MediaSlide({
       src={item.link}
       alt={item.alt}
       priority={priority}
+      loading={loading}
       maxHeight={imageMaxHeight}
       bordered
     />

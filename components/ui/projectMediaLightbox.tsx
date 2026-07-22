@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  motion,
-  AnimatePresence,
-  useReducedMotion,
-} from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -19,6 +15,12 @@ type ProjectMediaLightboxProps = {
 
 function stopClose(e: React.MouseEvent) {
   e.stopPropagation();
+}
+
+/** Keep image slides mounted (hidden) so navigating reuses the browser/Next cache. */
+function shouldKeepMounted(item: ProjectMediaItem, i: number, index: number) {
+  if (i === index) return true;
+  return item.type === "image";
 }
 
 export function ProjectMediaLightbox({
@@ -55,13 +57,11 @@ export function ProjectMediaLightbox({
     };
   }, [open, media.length, onClose]);
 
-  const goPrev = useCallback(
-    (e: React.MouseEvent) => {
-      e.stopPropagation();
-      setIndex((i) => Math.max(0, i - 1));
-    },
-    []
-  );
+  const goPrev = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIndex((i) => Math.max(0, i - 1));
+  }, []);
+
   const goNext = useCallback(
     (e: React.MouseEvent) => {
       e.stopPropagation();
@@ -71,8 +71,6 @@ export function ProjectMediaLightbox({
   );
 
   if (!mounted || !open) return null;
-
-  const item = media[index];
 
   return createPortal(
     <div
@@ -107,17 +105,24 @@ export function ProjectMediaLightbox({
           )}
 
           <div className="pointer-events-auto" onClick={stopClose}>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`${item.link}-${index}`}
-                initial={prefersReducedMotion ? false : { opacity: 0, x: 12 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -12 }}
-                transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
-              >
-                <MediaSlide item={item} layout="inline" />
-              </motion.div>
-            </AnimatePresence>
+            {media.map((slide, i) => {
+              if (!shouldKeepMounted(slide, i, index)) return null;
+              const isActive = i === index;
+              return (
+                <div
+                  key={slide.link}
+                  className={isActive ? "relative" : "hidden"}
+                  aria-hidden={!isActive}
+                >
+                  <MediaSlide
+                    item={slide}
+                    layout="inline"
+                    priority={Math.abs(i - index) <= 1}
+                    loading="eager"
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {media.length > 1 && (

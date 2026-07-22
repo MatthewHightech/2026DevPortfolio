@@ -6,6 +6,7 @@ import type projects from "@/data/projects.json";
 import { MediaSlide, type ProjectMediaItem } from "@/components/ui/mediaSlide";
 import { ProjectImage } from "@/components/ui/projectImage";
 import { ProjectMediaLightbox } from "@/components/ui/projectMediaLightbox";
+import { ProjectMediaPrefetch } from "@/components/ui/projectMediaPrefetch";
 import { TectonicButton } from "@/components/ui/tectonicButton";
 import {
   type ImageDimensions,
@@ -87,6 +88,7 @@ function HeroMedia({
 
 export function ProjectModule({ project, index }: ProjectModuleProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [warmGallery, setWarmGallery] = useState(false);
   const media = (project.media ?? []) as ProjectMediaItem[];
   const heroMedia = media[0];
   const reversed = index % 2 === 1;
@@ -135,12 +137,18 @@ export function ProjectModule({ project, index }: ProjectModuleProps) {
   );
 
   const mediaBlock = heroMedia ? (
-    <HeroMedia item={heroMedia} onOpen={() => setLightboxOpen(true)} />
+    <div
+      onMouseEnter={() => setWarmGallery(true)}
+      onFocusCapture={() => setWarmGallery(true)}
+    >
+      <HeroMedia item={heroMedia} onOpen={() => setLightboxOpen(true)} />
+    </div>
   ) : null;
 
   return (
     <>
-      <article className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
+      <article className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
+        {(warmGallery || lightboxOpen) && <ProjectMediaPrefetch media={media} />}
         {reversed ? (
           <>
             {mediaBlock}
