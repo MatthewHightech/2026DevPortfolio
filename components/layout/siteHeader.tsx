@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin } from "lucide-react";
+import { Download, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="page-margin mx-auto flex h-14 max-w-7xl items-center justify-between gap-4">
         <Link
           href="#"
-          className="shrink-0 text-sm font-medium tracking-tight transition-colors hover:text-secondary"
+          className="text-mono-meta shrink-0 text-foreground transition-colors hover:text-secondary"
         >
           Matt Smith
         </Link>
@@ -64,6 +64,14 @@ export function SiteHeader() {
             aria-label="LinkedIn profile"
           >
             <Linkedin className="size-4" aria-hidden />
+          </a>
+          <a
+            href="/Matt_Smith_Resume.pdf"
+            download="Matt_Smith_Resume.pdf"
+            className={`inline-flex items-center gap-1.5 text-mono-meta ${socialClass}`}
+          >
+            <Download className="size-3.5" aria-hidden />
+            Resume
           </a>
         </div>
       </div>
