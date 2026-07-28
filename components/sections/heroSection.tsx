@@ -106,7 +106,7 @@ export function HeroSection() {
               effective engineer. I&apos;m constantly learning how to learn.
             </p>
             <p>
-              I'm in the pursuit of building tools that people genuinely love using, and deliver value to communities through education, safety, organization, and improved health.
+              I'm in the pursuit of building tools that people genuinely love using and delivering value to communities through organization, education, public safety, and healthcare.
             </p>
           </motion.div>
         </div>

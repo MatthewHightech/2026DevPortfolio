@@ -7,10 +7,10 @@
     "period": "April- August, 2025",
     "skills": ["Next.js", "React Native", "TypeScript", "GraphQL", "PostgreSQL", "Figma"],
     "achievements": [
-      "Took ownership of multiple 0-1 projects across frontend, backend and mobile domains built with Next.js and React Native",
-      "Shipped over 100,000 lines of code over the internship, releasing on a 2 week cycle to meet ambitious deadlines",
-      "Built a tooling platform to automate PDF filing for over 500 customers, reducing manual input by over 80%",
-      "Thrived in a high-performance startup environment, extending weeks to over 60 hours to push ambitious deadlines and deliver high-quality software"
+      "Took ownership of multiple 0-1 projects across full stack web and mobile, built with Next.js and React Native",
+      "Led development of the calendar system to support editable schedules for teachers, parents, and students. Built with TypeScript and GraphQL to optimize database interaction for one of the most used features",
+      "Created a schedule-solver for placement of 800 students, 40 classrooms, and 16 virtual teachers across 3 timezones while optimizing complex variables (such as minimizing spread of math level in classes)",
+      "Thrived in a high-performance startup environment, extending weeks to over 60 hours to push aggressive deadlines and deliver high-quality software"
     ]
   },
   {
@@ -21,8 +21,8 @@
     "period": "April - August, 2023",
     "skills": [".NET", "C#", "Jira"],
     "achievements": [
-      "Developed an electrical monitoring app using .NET, ensuring the safety of client facilities by delivering metric reports and alerts",
-      "Assisted leading multiple sprint planning/retrospectives, ensuring all sprint tasks during my term were completed on time"
+      "Developed an electrical monitoring web app to deliver energy reports and fine-tuned my software process for working on safety-critical systems that require excellent attention to detail",
+      "Organized a series of meetings with my team to address conflict between the devs and new scrum master, resulting in a helpful understanding of expectations and tighter cohesion"
     ]
   },
   {
@@ -45,8 +45,8 @@
     "period": "March - August, 2021",
     "skills": ["Go", "TypeScript", "React"],
     "achievements": [
-      "Developed an automated deployment system to streamline product releases using Go and Typescript, significantly reducing deployment time",
-      "Built an interactive Organization Chart using React and Chart JS, enhancing cross-team communication and increasing company-wide visibility of team structures"
+      "Developed an automated deployment system to centralize product releases from multiple cloud services using Go and TypeScript, reducing deployment time and complexity",
+      "Built an internal project management tool with React to handle Jira tickets in a custom kanban dashboard, gathering and implementing requirements from all sub-teams across the company"
     ]
   },
   {
@@ -57,8 +57,8 @@
     "period": "September - December, 2020",
     "skills": ["Angular", "Ionic", "C"],
     "achievements": [
-      "Rebuilt a legacy design tool written in C into a modern desktop app using Angular and Ionic reducing cam design time by 90%",
-      "Organized weekly meetings with Senior Engineers to review progress and provide feedback so the tool would meet the needs of the team"
+      "Modernized a legacy design tool by transitioning from a command-line interface to a desktop app using TypeScript and Ionic, improving usability and reducing design iteration cycles by 95%",
+      "Collaborated with mechanical engineers to gather requirements and brainstorm new features, ensuring weekly updates met project needs"
     ]
   }
 ]
