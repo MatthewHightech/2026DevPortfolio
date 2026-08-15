@@ -1,17 +1,18 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
-import { SectionLabel } from "@/components/ui/sectionLabel";
 import { ValuesList } from "@/components/ui/valuesList";
+
+const socialClass =
+  "text-foreground transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary";
 
 export function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <section id="hero" className="section-gap page-margin mx-auto max-w-7xl">
-      <SectionLabel section="SECTION_01" label="ABOUT" />
-
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
         <motion.div
           className="lg:col-span-4 lg:col-start-1"
@@ -20,15 +21,15 @@ export function HeroSection() {
           transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
         >
           <div className="relative aspect-[3/4] w-full max-w-[280px] overflow-hidden bg-surface-container">
-              <Image
-                src="/images/Profile.png"
-                alt="Portrait of Matt Smith"
-                fill
-                priority
-                fetchPriority="high"
-                sizes="(max-width: 1024px) 280px, 320px"
-                className="object-cover object-center"
-              />
+            <Image
+              src="/images/Profile.png"
+              alt="Portrait of Matt Smith"
+              fill
+              priority
+              fetchPriority="high"
+              sizes="(max-width: 1024px) 280px, 320px"
+              className="object-cover object-center"
+            />
           </div>
         </motion.div>
 
@@ -58,7 +59,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.p
-            className="text-mono-meta mb-12 text-muted-foreground"
+            className="text-mono-meta mb-4 text-muted-foreground"
             initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -66,15 +67,44 @@ export function HeroSection() {
               delay: prefersReducedMotion ? 0 : 0.14,
             }}
           >
-            UVic Software Engineering Grad 2026
+            Graduate of UVic Software Engineering
           </motion.p>
+
+          <motion.div
+            className="mb-12 flex items-center gap-3"
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: prefersReducedMotion ? 0 : 0.4,
+              delay: prefersReducedMotion ? 0 : 0.16,
+            }}
+          >
+            <a
+              href="https://github.com/MatthewHightech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={socialClass}
+              aria-label="GitHub profile"
+            >
+              <Github className="size-5" aria-hidden />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/matthew-smith-softdev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={socialClass}
+              aria-label="LinkedIn profile"
+            >
+              <Linkedin className="size-5" aria-hidden />
+            </a>
+          </motion.div>
 
           <motion.div
             initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: prefersReducedMotion ? 0 : 0.4,
-              delay: prefersReducedMotion ? 0 : 0.15,
+              delay: prefersReducedMotion ? 0 : 0.18,
             }}
           >
             <ValuesList />
@@ -106,7 +136,9 @@ export function HeroSection() {
               effective engineer. I&apos;m constantly learning how to learn.
             </p>
             <p>
-              I'm in the pursuit of building tools that people genuinely love using and delivering value to communities through organization, education, public safety, and healthcare.
+              I&apos;m in the pursuit of building tools that people genuinely
+              love using and delivering value to communities through
+              organization, education, public safety, and healthcare.
             </p>
           </motion.div>
         </div>

@@ -20,7 +20,7 @@ type ProjectModuleProps = {
   index: number;
 };
 
-const HERO_IMAGE_MAX_HEIGHT = "min(70vh, 560px)";
+const HERO_IMAGE_MAX_HEIGHT = "min(50vh, 380px)";
 
 function HeroMedia({
   item,
@@ -61,7 +61,7 @@ function HeroMedia({
               src={item.link}
               alt={item.alt}
               maxHeight={HERO_IMAGE_MAX_HEIGHT}
-              maxWidth={isPortrait ? "300px" : undefined}
+              maxWidth={isPortrait ? "220px" : undefined}
               bordered
               className="transition-transform duration-500 group-hover:scale-[1.01]"
               priority={false}
@@ -95,26 +95,25 @@ export function ProjectModule({ project, index }: ProjectModuleProps) {
 
   const textBlock = (
     <div className="flex flex-col justify-center">
-      <h3 className="text-headline-md mb-2">{project.title}</h3>
-      {project.subtitle && (
-        <p className="text-mono-meta mb-4 text-secondary">{project.subtitle}</p>
-      )}
-      <p className="mb-6 text-body-lg leading-relaxed text-muted-foreground">
-        {project.description}
+      <h3 className="text-headline-md mb-3">{project.title}</h3>
+
+      <ul className="mb-4 space-y-2 text-body-lg leading-snug text-muted-foreground">
+        {project.description.map((point) => (
+          <li key={point} className="flex gap-3">
+            <span
+              className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-muted-foreground"
+              aria-hidden
+            />
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+
+      <p className="text-mono-meta mb-4 text-muted-foreground">
+        {project.techStack.join(" · ")}
       </p>
 
-      <div className="mb-6 flex flex-wrap gap-2">
-        {project.techStack.map((tech) => (
-          <span
-            key={tech}
-            className="border border-outline-variant px-2 py-1 text-mono-meta text-muted-foreground"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-2">
         {project.githubUrl && (
           <TectonicButton href={project.githubUrl} external variant="primary">
             <Github className="size-3.5" aria-hidden />
@@ -147,7 +146,7 @@ export function ProjectModule({ project, index }: ProjectModuleProps) {
 
   return (
     <>
-      <article className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
+      <article className="relative grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10">
         {(warmGallery || lightboxOpen) && <ProjectMediaPrefetch media={media} />}
         {reversed ? (
           <>

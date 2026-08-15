@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { SectionLabel } from "@/components/ui/sectionLabel";
 import { ProjectModule } from "@/components/ui/projectModule";
 import projects from "@/data/projects.json";
 
@@ -19,8 +18,7 @@ export function ProjectsSection() {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
       >
-        <SectionLabel section="SECTION_02" label="PROJECTS" />
-        <div className="space-y-20">
+        <div className="space-y-12">
           {projects.map((project, idx) => (
             <ProjectModule key={project.id} project={project} index={idx} />
           ))}
