@@ -1,148 +1,48 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
-import Image from "next/image";
-import { ValuesList } from "@/components/ui/valuesList";
-
-const socialClass =
-  "text-foreground transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary";
+import { values } from "@/data/values";
 
 export function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="hero" className="section-gap page-margin mx-auto max-w-7xl">
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
-        <motion.div
-          className="lg:col-span-4 lg:col-start-1"
-          initial={prefersReducedMotion ? false : { opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
-        >
-          <div className="relative aspect-[3/4] w-full max-w-[280px] overflow-hidden bg-surface-container">
-            <Image
-              src="/images/Profile.png"
-              alt="Portrait of Matt Smith"
-              fill
-              priority
-              fetchPriority="high"
-              sizes="(max-width: 1024px) 280px, 320px"
-              className="object-cover object-center"
-            />
-          </div>
-        </motion.div>
+    <section
+      id="hero"
+      className="page-margin mx-auto flex max-w-7xl flex-col items-center pt-12 pb-10 text-center md:pt-16 md:pb-12"
+    >
+      <motion.p
+        className="mb-8 max-w-xl text-body-lg leading-relaxed text-muted-foreground"
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
+      >
+        My name is Matt Smith. <br />I&apos;m an engineer along with other things.<br />
+        Here&apos;s a little about how I operate.
+      </motion.p>
 
-        <div className="lg:col-span-8 lg:col-start-5">
-          <motion.h1
-            className="text-display-lg mb-3 max-w-3xl"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.5,
-              delay: prefersReducedMotion ? 0 : 0.1,
-            }}
-          >
-            Matt Smith
-          </motion.h1>
-
-          <motion.p
-            className="text-headline-md mb-2 text-muted-foreground"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.45,
-              delay: prefersReducedMotion ? 0 : 0.12,
-            }}
-          >
-            Software Generalist
-          </motion.p>
-
-          <motion.p
-            className="text-mono-meta mb-4 text-muted-foreground"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.45,
-              delay: prefersReducedMotion ? 0 : 0.14,
-            }}
-          >
-            Graduate of UVic Software Engineering
-          </motion.p>
-
-          <motion.div
-            className="mb-12 flex items-center gap-3"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+      <ul className="inline-flex w-full max-w-2xl flex-col space-y-2.5 text-left">
+        {values.map((value, index) => (
+          <motion.li
+            key={value}
+            className="text-values flex gap-2.5 text-foreground"
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: prefersReducedMotion ? 0 : 0.4,
-              delay: prefersReducedMotion ? 0 : 0.16,
+              delay: prefersReducedMotion ? 0 : 0.06 * index,
             }}
           >
-            <a
-              href="https://github.com/MatthewHightech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={socialClass}
-              aria-label="GitHub profile"
+            <span
+              className="mt-[0.05em] shrink-0 font-bold text-secondary"
+              aria-hidden
             >
-              <Github className="size-5" aria-hidden />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/matthew-smith-softdev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={socialClass}
-              aria-label="LinkedIn profile"
-            >
-              <Linkedin className="size-5" aria-hidden />
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.4,
-              delay: prefersReducedMotion ? 0 : 0.18,
-            }}
-          >
-            <ValuesList />
-          </motion.div>
-
-          <motion.div
-            className="mt-12 max-w-2xl space-y-4 text-body-lg leading-relaxed text-muted-foreground"
-            initial={prefersReducedMotion ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.5,
-              delay: prefersReducedMotion ? 0 : 0.4,
-            }}
-          >
-            <p>
-              I have a very broad approach to engineering. I&apos;ve determined
-              that the more I can explore, the more data I have to inform my
-              decisions and the easier it is to learn new things. My pursuit of
-              guitar,{" "}
-              <a
-                href="https://tovproductions.ca/video"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground underline decoration-outline-variant underline-offset-4 transition-colors hover:text-secondary hover:decoration-secondary"
-              >
-                cinematography
-              </a>
-              , surfing and woodworking have all helped me become a more
-              effective engineer. I&apos;m constantly learning how to learn.
-            </p>
-            <p>
-              I&apos;m in the pursuit of building tools that people genuinely
-              love using and delivering value to communities through
-              organization, education, public safety, and healthcare.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+              »
+            </span>
+            <span>{value}</span>
+          </motion.li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Github, Globe, Maximize2 } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 import type projects from "@/data/projects.json";
 import { MediaSlide, type ProjectMediaItem } from "@/components/ui/mediaSlide";
 import { ProjectImage } from "@/components/ui/projectImage";
@@ -17,28 +17,42 @@ type Project = (typeof projects)[number];
 
 type ProjectModuleProps = {
   project: Project;
-  index: number;
 };
 
-const HERO_IMAGE_MAX_HEIGHT = "min(50vh, 380px)";
+const HERO_IMAGE_MAX_HEIGHT = "min(50vh, 420px)";
 
 function HeroMedia({
   item,
+  title,
   onOpen,
 }: {
   item: ProjectMediaItem;
+  title: string;
   onOpen: () => void;
 }) {
   const [dims, setDims] = useState<ImageDimensions | null>(null);
   const isYoutube = item.type === "youtube";
   const isPortrait = item.type === "image" && isPortraitImage(dims);
 
+  const overlay = (
+    <span
+      className="absolute inset-0 z-10 flex items-center justify-center bg-primary/70 px-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+      aria-hidden
+    >
+      <span className="text-headline-md text-center text-on-primary">{title}</span>
+    </span>
+  );
+
   return (
     <button
       type="button"
       onClick={onOpen}
-      className="group relative block h-full w-full cursor-pointer text-left"
-      aria-label={`Open media gallery for ${item.alt}`}
+      className={
+        isYoutube || item.type === "video"
+          ? "group relative block w-full cursor-pointer text-left"
+          : "group relative mx-auto block w-fit max-w-full cursor-pointer text-left"
+      }
+      aria-label={`Open gallery for ${title}`}
     >
       {isYoutube ? (
         <div className="relative aspect-video w-full overflow-hidden border border-outline-variant">
@@ -49,126 +63,87 @@ function HeroMedia({
               imageMaxHeight={HERO_IMAGE_MAX_HEIGHT}
             />
           </div>
-          <span className="absolute right-3 top-3 flex items-center gap-1.5 border border-outline-variant bg-background/90 px-2 py-1 text-mono-meta text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-            <Maximize2 className="size-3" aria-hidden />
-            VIEW ALL
-          </span>
+          {overlay}
         </div>
       ) : item.type === "image" ? (
-        <div className="flex w-full justify-center">
-          <div className="relative inline-flex">
-            <ProjectImage
-              src={item.link}
-              alt={item.alt}
-              maxHeight={HERO_IMAGE_MAX_HEIGHT}
-              maxWidth={isPortrait ? "220px" : undefined}
-              bordered
-              className="transition-transform duration-500 group-hover:scale-[1.01]"
-              priority={false}
-              onDimensionsLoad={setDims}
-            />
-            <span className="absolute right-3 top-3 flex items-center gap-1.5 border border-outline-variant bg-background/90 px-2 py-1 text-mono-meta text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-              <Maximize2 className="size-3" aria-hidden />
-              VIEW ALL
-            </span>
-          </div>
+        <div className="relative inline-flex max-w-full leading-none">
+          <ProjectImage
+            src={item.link}
+            alt={item.alt}
+            maxHeight={HERO_IMAGE_MAX_HEIGHT}
+            maxWidth={isPortrait ? "240px" : undefined}
+            bordered
+            priority={false}
+            onDimensionsLoad={setDims}
+          />
+          {overlay}
         </div>
       ) : (
         <div className="relative w-full overflow-hidden border border-outline-variant">
           <MediaSlide item={item} imageMaxHeight={HERO_IMAGE_MAX_HEIGHT} />
-          <span className="absolute right-3 top-3 flex items-center gap-1.5 border border-outline-variant bg-background/90 px-2 py-1 text-mono-meta text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-            <Maximize2 className="size-3" aria-hidden />
-            VIEW ALL
-          </span>
+          {overlay}
         </div>
       )}
     </button>
   );
 }
 
-export function ProjectModule({ project, index }: ProjectModuleProps) {
+export function ProjectModule({ project }: ProjectModuleProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [warmGallery, setWarmGallery] = useState(false);
   const media = (project.media ?? []) as ProjectMediaItem[];
   const heroMedia = media[0];
-  const reversed = index % 2 === 1;
 
-  const textBlock = (
-    <div className="flex flex-col justify-center">
-      <h3 className="text-headline-md mb-3">{project.title}</h3>
-
-      <ul className="mb-4 space-y-2 text-body-lg leading-snug text-muted-foreground">
-        {project.description.map((point) => (
-          <li key={point} className="flex gap-3">
-            <span
-              className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-muted-foreground"
-              aria-hidden
-            />
-            <span>{point}</span>
-          </li>
-        ))}
-      </ul>
-
-      <p className="text-mono-meta mb-4 text-muted-foreground">
-        {project.techStack.join(" · ")}
-      </p>
-
-      <div className="flex flex-wrap gap-2">
-        {project.githubUrl && (
-          <TectonicButton href={project.githubUrl} external variant="primary">
-            <Github className="size-3.5" aria-hidden />
-            GitHub
-          </TectonicButton>
-        )}
-        {project.liveUrl && (
-          <TectonicButton
-            href={project.liveUrl.link}
-            external
-            variant="primary"
-            ariaLabel={project.liveUrl.text}
-          >
-            <Globe className="size-3.5" aria-hidden />
-            {project.liveUrl.text}
-          </TectonicButton>
-        )}
-      </div>
-    </div>
-  );
-
-  const mediaBlock = heroMedia ? (
-    <div
-      onMouseEnter={() => setWarmGallery(true)}
-      onFocusCapture={() => setWarmGallery(true)}
-    >
-      <HeroMedia item={heroMedia} onOpen={() => setLightboxOpen(true)} />
-    </div>
-  ) : null;
+  if (!heroMedia) return null;
 
   return (
     <>
-      <article className="relative grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10">
+      <article className="relative mx-auto w-full max-w-3xl">
         {(warmGallery || lightboxOpen) && <ProjectMediaPrefetch media={media} />}
-        {reversed ? (
-          <>
-            {mediaBlock}
-            {textBlock}
-          </>
-        ) : (
-          <>
-            {textBlock}
-            {mediaBlock}
-          </>
+
+        <div
+          onMouseEnter={() => setWarmGallery(true)}
+          onFocusCapture={() => setWarmGallery(true)}
+        >
+          <HeroMedia
+            item={heroMedia}
+            title={project.title}
+            onOpen={() => setLightboxOpen(true)}
+          />
+        </div>
+
+        {(project.githubUrl || project.liveUrl) && (
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            {project.githubUrl && (
+              <TectonicButton href={project.githubUrl} external variant="primary">
+                <Github className="size-3.5" aria-hidden />
+                GitHub
+              </TectonicButton>
+            )}
+            {project.liveUrl && (
+              <TectonicButton
+                href={project.liveUrl.link}
+                external
+                variant="primary"
+                ariaLabel={project.liveUrl.text}
+              >
+                <Globe className="size-3.5" aria-hidden />
+                {project.liveUrl.text}
+              </TectonicButton>
+            )}
+          </div>
         )}
       </article>
 
-      {media.length > 0 && (
-        <ProjectMediaLightbox
-          media={media}
-          initialIndex={0}
-          open={lightboxOpen}
-          onClose={() => setLightboxOpen(false)}
-        />
-      )}
+      <ProjectMediaLightbox
+        media={media}
+        title={project.title}
+        techStack={project.techStack}
+        description={project.description}
+        initialIndex={0}
+        open={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
     </>
   );
 }

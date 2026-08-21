@@ -44,7 +44,10 @@ export function MediaSlide({
     }
     if (layout === "inline") {
       return (
-        <div className="aspect-video w-[min(90vw,56rem)] overflow-hidden border border-outline-variant">
+        <div
+          className="aspect-video w-[min(90vw,56rem)] max-h-full overflow-hidden border border-outline-variant"
+          style={{ maxHeight: imageMaxHeight }}
+        >
           <iframe
             title={item.alt}
             src={embedUrl}
@@ -72,7 +75,8 @@ export function MediaSlide({
     if (layout === "inline") {
       return (
         <video
-          className="max-h-[min(85dvh,720px)] max-w-[min(90vw,56rem)] border border-outline-variant object-contain"
+          className="max-w-[min(90vw,56rem)] border border-outline-variant object-contain"
+          style={{ maxHeight: imageMaxHeight }}
           controls
           playsInline
           preload="metadata"

@@ -99,7 +99,7 @@
   },
   {
     "id": "ios-app",
-    "title": "Pigment Paint Mixer (iOS App)",
+    "title": "Pigment Paint Mixer",
     "description": [
       "React Native app that lets artists capture a scene and build a virtual paint palette from the photo",
       "Breaks each palette color into fundamentals (red, yellow, blue, white, black) for mixing guidance",

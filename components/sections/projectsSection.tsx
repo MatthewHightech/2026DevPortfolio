@@ -18,9 +18,9 @@ export function ProjectsSection() {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
       >
-        <div className="space-y-12">
-          {projects.map((project, idx) => (
-            <ProjectModule key={project.id} project={project} index={idx} />
+        <div className="space-y-14">
+          {projects.map((project) => (
+            <ProjectModule key={project.id} project={project} />
           ))}
         </div>
       </motion.div>

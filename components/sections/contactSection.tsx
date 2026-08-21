@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { Github, Linkedin } from "lucide-react";
 import { ResumeModal } from "@/components/ui/resumeModal";
 
 const EMAIL = "mattsmithwebdev@gmail.com";
+
+const socialClass =
+  "text-foreground transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary";
 
 export function ContactSection() {
   const prefersReducedMotion = useReducedMotion();
@@ -20,8 +24,60 @@ export function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
+        className="max-w-5xl"
       >
-        <p className="mb-8 max-w-xl text-body-lg leading-relaxed text-muted-foreground">
+        <h2 className="text-display-lg mb-3">Matt Smith</h2>
+
+        <p className="text-headline-md mb-2 text-muted-foreground">
+          Software Engineer (BSEng)
+        </p>
+
+        <div className="mb-10 flex items-center gap-3">
+          <a
+            href="https://github.com/MatthewHightech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={socialClass}
+            aria-label="GitHub profile"
+          >
+            <Github className="size-5" aria-hidden />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/matthew-smith-softdev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={socialClass}
+            aria-label="LinkedIn profile"
+          >
+            <Linkedin className="size-5" aria-hidden />
+          </a>
+        </div>
+
+        <div className="mb-10 space-y-4 text-body-lg leading-relaxed text-muted-foreground">
+          <p>
+            I have a very broad approach to engineering. I&apos;ve determined
+            that the more I can explore, the more data I have to inform my
+            decisions and the easier it is to learn new things. My pursuit of
+            guitar,{" "}
+            <a
+              href="https://tovproductions.ca/video"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline decoration-outline-variant underline-offset-4 transition-colors hover:text-secondary hover:decoration-secondary"
+            >
+              cinematography
+            </a>
+            , surfing and woodworking have all helped me become a more
+            effective engineer. I&apos;m constantly learning how to learn.
+          </p>
+          <p>
+            I&apos;m in the pursuit of building tools that people genuinely
+            love using and delivering value to communities through
+            organization, education, public safety, and healthcare.
+          </p>
+        </div>
+
+        <p className="mb-8 text-body-lg leading-relaxed text-muted-foreground">
           Always happy to chat. I&apos;m looking to join a motivated software
           team in the Victoria area for October 2026.
         </p>

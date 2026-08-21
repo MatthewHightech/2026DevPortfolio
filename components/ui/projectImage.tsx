@@ -47,7 +47,7 @@ export function ProjectImage({
         priority={priority}
         loading={priority ? undefined : loading}
         sizes={PROJECT_IMAGE_SIZES}
-        className={`h-auto w-auto max-w-full object-contain ${
+        className={`block h-auto w-auto max-w-full object-contain ${
           bordered ? "border border-outline-variant" : ""
         }`}
         style={{ maxHeight, maxWidth }}

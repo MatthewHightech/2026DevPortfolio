@@ -1,13 +1,16 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { MediaSlide, type ProjectMediaItem } from "@/components/ui/mediaSlide";
 
 type ProjectMediaLightboxProps = {
   media: ProjectMediaItem[];
+  title: string;
+  techStack: string[];
+  description: string[];
   initialIndex?: number;
   open: boolean;
   onClose: () => void;
@@ -25,6 +28,9 @@ function shouldKeepMounted(item: ProjectMediaItem, i: number, index: number) {
 
 export function ProjectMediaLightbox({
   media,
+  title,
+  techStack,
+  description,
   initialIndex = 0,
   open,
   onClose,
@@ -50,10 +56,13 @@ export function ProjectMediaLightbox({
         setIndex((i) => Math.min(media.length - 1, i + 1));
     };
     document.addEventListener("keydown", onKey);
+    const { overflow, overscrollBehavior } = document.body.style;
     document.body.style.overflow = "hidden";
+    document.body.style.overscrollBehavior = "none";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = overflow;
+      document.body.style.overscrollBehavior = overscrollBehavior;
     };
   }, [open, media.length, onClose]);
 
@@ -74,19 +83,43 @@ export function ProjectMediaLightbox({
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[200] flex min-h-[100dvh] w-screen items-center justify-center bg-primary/95 p-4 backdrop-blur-md"
+      className="fixed inset-0 z-[200]"
       role="dialog"
       aria-modal="true"
-      aria-label="Project media gallery"
-      onClick={onClose}
+      aria-label={`${title} gallery`}
     >
-      <motion.div
-        initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: prefersReducedMotion ? 0 : 0.25 }}
-        className="pointer-events-none relative flex w-full max-w-5xl flex-col items-center"
+      <div
+        className="absolute inset-0 bg-primary backdrop-blur-md"
+        aria-hidden
+        onClick={onClose}
+      />
+      <button
+        type="button"
+        onClick={onClose}
+        className="pointer-events-auto absolute right-4 top-4 z-20 border border-on-primary/30 p-2 text-on-primary transition-colors hover:bg-on-primary/10 md:right-6 md:top-6"
+        aria-label="Close project"
       >
-        <p className="text-mono-meta mb-3 text-on-primary">
+        <X className="size-5" aria-hidden />
+      </button>
+      <div
+        className="absolute inset-0 overflow-y-auto overscroll-none bg-primary p-4"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: prefersReducedMotion ? 0 : 0.25 }}
+          className="pointer-events-none relative mx-auto flex min-h-full w-full max-w-6xl flex-col items-center justify-center py-6"
+          onClick={stopClose}
+        >
+        <div className="pointer-events-auto mb-6 w-full text-center">
+          <h2 className="text-headline-md mb-3 text-on-primary">{title}</h2>
+          <p className="text-mono-meta text-on-primary/70">
+            {techStack.join(" · ")}
+          </p>
+        </div>
+
+        <p className="text-mono-meta mb-3 text-on-primary/60">
           MEDIA {String(index + 1).padStart(2, "0")} /{" "}
           {String(media.length).padStart(2, "0")}
         </p>
@@ -104,19 +137,27 @@ export function ProjectMediaLightbox({
             </button>
           )}
 
-          <div className="pointer-events-auto" onClick={stopClose}>
+          <div
+            className="pointer-events-auto relative h-[min(55dvh,520px)] w-full max-w-5xl"
+            onClick={stopClose}
+          >
             {media.map((slide, i) => {
               if (!shouldKeepMounted(slide, i, index)) return null;
               const isActive = i === index;
               return (
                 <div
                   key={slide.link}
-                  className={isActive ? "relative" : "hidden"}
+                  className={
+                    isActive
+                      ? "absolute inset-0 flex items-center justify-center"
+                      : "hidden"
+                  }
                   aria-hidden={!isActive}
                 >
                   <MediaSlide
                     item={slide}
                     layout="inline"
+                    imageMaxHeight="min(55dvh, 520px)"
                     priority={Math.abs(i - index) <= 1}
                     loading="eager"
                   />
@@ -162,7 +203,20 @@ export function ProjectMediaLightbox({
             ))}
           </div>
         )}
-      </motion.div>
+
+        <ul className="pointer-events-auto mt-8 w-full max-w-3xl space-y-3 text-left text-body-lg leading-relaxed text-on-primary/85">
+          {description.map((point) => (
+            <li key={point} className="flex gap-3">
+              <span
+                className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-secondary"
+                aria-hidden
+              />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+        </motion.div>
+      </div>
     </div>,
     document.body
   );

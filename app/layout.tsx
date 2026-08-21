@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Hanken_Grotesk, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const hankenGrotesk = Hanken_Grotesk({
@@ -20,6 +20,15 @@ const jetbrainsMono = JetBrains_Mono({
   adjustFontFallback: true,
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  preload: true,
+  adjustFontFallback: true,
+});
+
 export const metadata: Metadata = {
   title: "Matt Smith — Software Engineer Portfolio",
   description:
@@ -34,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${hankenGrotesk.variable} ${jetbrainsMono.variable} bg-background text-foreground antialiased`}
+        className={`${hankenGrotesk.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} bg-background text-foreground antialiased`}
       >
         {children}
       </body>

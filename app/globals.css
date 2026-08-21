@@ -58,6 +58,7 @@
   --color-error: var(--error);
   --font-sans: var(--font-hanken);
   --font-mono: var(--font-jetbrains);
+  --font-values: var(--font-space);
 }
 
 body {
@@ -97,6 +98,14 @@ body {
     line-height: 1.4;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+  }
+
+  .text-values {
+    font-family: var(--font-space), system-ui, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
   }
 
   .section-gap {
