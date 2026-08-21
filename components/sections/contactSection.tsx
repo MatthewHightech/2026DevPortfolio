@@ -71,8 +71,7 @@ export function ContactSection() {
             effective engineer. I&apos;m constantly learning how to learn.
           </p>
           <p>
-            I&apos;m in the pursuit of building tools that people genuinely
-            love using and delivering value to communities through
+            I&apos;m in the pursuit of building tools people can easily use and that deliver value to communities through
             organization, education, public safety, and healthcare.
           </p>
         </div>
