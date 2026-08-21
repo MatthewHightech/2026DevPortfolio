@@ -102,7 +102,7 @@ export function ProjectMediaLightbox({
         <X className="size-5" aria-hidden />
       </button>
       <div
-        className="absolute inset-0 overflow-y-auto overscroll-none bg-primary p-4"
+        className="absolute inset-0 overflow-y-auto overscroll-none bg-primary p-4 pt-16 md:pt-4"
         onClick={onClose}
       >
         <motion.div
@@ -112,7 +112,7 @@ export function ProjectMediaLightbox({
           className="pointer-events-none relative mx-auto flex min-h-full w-full max-w-6xl flex-col items-center justify-center py-6"
           onClick={stopClose}
         >
-        <div className="pointer-events-auto mb-6 w-full text-center">
+        <div className="pointer-events-auto mb-6 w-full px-10 text-center md:px-0">
           <h2 className="text-headline-md mb-3 text-on-primary">{title}</h2>
           <p className="text-mono-meta text-on-primary/70">
             {techStack.join(" · ")}
