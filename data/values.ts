@@ -4,5 +4,5 @@ export const values = [
   "I value failing fast.",
   "I value calculated risks.",
   "I value simplicity as a default and complexity when necessary.",
-  "I value questioning everything, knowing when to make a decision and maintaining the ability to adapt.",
+  "I value asking questions, knowing when to make a decision and maintaining the ability to adapt.",
 ] as const;
