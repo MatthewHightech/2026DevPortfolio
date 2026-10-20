@@ -3,7 +3,11 @@ import { HeroSection } from "@/components/sections/heroSection";
 import { ProjectsSection } from "@/components/sections/projectsSection";
 import { ContactSection } from "@/components/sections/contactSection";
 
-export default function Home() {
+export default function SiteLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <>
       <main>
@@ -12,6 +16,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <SiteFooter />
+      {children}
     </>
   );
 }

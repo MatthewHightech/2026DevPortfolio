@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
-import { ResumeModal } from "@/components/ui/resumeModal";
 
 const EMAIL = "mattsmithwebdev@gmail.com";
 
@@ -12,7 +11,6 @@ const socialClass =
 
 export function ContactSection() {
   const prefersReducedMotion = useReducedMotion();
-  const [resumeOpen, setResumeOpen] = useState(false);
 
   return (
     <section
@@ -88,9 +86,9 @@ export function ContactSection() {
           >
             {EMAIL}
           </a>
-          <button
-            type="button"
-            onClick={() => setResumeOpen(true)}
+          <Link
+            href="/resume"
+            scroll={false}
             className="group relative inline-flex cursor-pointer items-center gap-2 overflow-hidden border border-primary bg-primary px-5 py-2.5 text-mono-meta text-on-primary transition-colors"
           >
             <span
@@ -100,11 +98,9 @@ export function ContactSection() {
             <span className="relative z-10 transition-colors group-hover:text-foreground">
               View Resume
             </span>
-          </button>
+          </Link>
         </div>
       </motion.div>
-
-      <ResumeModal open={resumeOpen} onClose={() => setResumeOpen(false)} />
     </section>
   );
 }

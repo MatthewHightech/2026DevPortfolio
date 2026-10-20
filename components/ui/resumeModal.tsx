@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { useRouter } from "next/navigation";
 import { Download, X } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -15,7 +16,6 @@ type ResumeModalProps = {
 
 export function ResumeModal({ open, onClose }: ResumeModalProps) {
   const [mounted, setMounted] = useState(false);
-  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     setMounted(true);
@@ -35,6 +35,24 @@ export function ResumeModal({ open, onClose }: ResumeModalProps) {
   }, [open, onClose]);
 
   if (!mounted || !open) return null;
+
+  return <ResumeModalFrame onClose={onClose} />;
+}
+
+/** Opens the same resume modal because the URL is `/resume`. */
+export function ResumeRouteModal() {
+  const router = useRouter();
+
+  return (
+    <ResumeModal
+      open
+      onClose={() => router.push("/", { scroll: false })}
+    />
+  );
+}
+
+function ResumeModalFrame({ onClose }: { onClose: () => void }) {
+  const prefersReducedMotion = useReducedMotion();
 
   return createPortal(
     <div
