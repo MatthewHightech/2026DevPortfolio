@@ -27,7 +27,7 @@ export function ContactSection() {
         <h2 className="text-display-lg mb-3">Matt Smith</h2>
 
         <p className="text-headline-md mb-2 text-muted-foreground">
-          Software Engineer (BSEng)
+          Software Engineer (UVic BSEng)
         </p>
 
         <div className="mb-10 flex items-center gap-3">
@@ -76,7 +76,7 @@ export function ContactSection() {
 
         <p className="mb-8 text-body-lg leading-relaxed text-muted-foreground">
           Always happy to chat. I&apos;m looking to join a motivated software
-          team in the Victoria area for October 2026.
+          team in the Victoria area for fall 2026.
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
