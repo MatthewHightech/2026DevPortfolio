@@ -17,7 +17,7 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
       >
-        My name is Matt Smith. <br />I&apos;m an engineer along with other things.<br />
+        My name is Matt Smith. <br />I&apos;m a software engineer along with other things.<br />
         Here&apos;s a little about how I operate.
       </motion.p>
 
