@@ -18,31 +18,42 @@ export function HeroSection() {
         transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
       >
         My name is Matt Smith. <br />I&apos;m a software engineer along with other things.<br />
-        Here&apos;s a little about how I operate.
+        Here&apos;s a little about how I operate:
       </motion.p>
 
-      <ul className="inline-flex w-full max-w-2xl flex-col space-y-2.5 text-left">
-        {values.map((value, index) => (
-          <motion.li
-            key={value}
-            className="text-values flex gap-2.5 text-foreground"
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: prefersReducedMotion ? 0 : 0.4,
-              delay: prefersReducedMotion ? 0 : 0.06 * index,
-            }}
-          >
-            <span
-              className="mt-[0.05em] shrink-0 font-bold text-secondary"
-              aria-hidden
+      <div className="inline-flex w-full max-w-2xl flex-col text-left">
+        <motion.p
+          className="text-values mb-2.5 text-foreground"
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
+        >
+          I value
+        </motion.p>
+
+        <ul className="flex flex-col space-y-2.5">
+          {values.map((value, index) => (
+            <motion.li
+              key={value}
+              className="text-values flex gap-2.5 text-foreground"
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: prefersReducedMotion ? 0 : 0.4,
+                delay: prefersReducedMotion ? 0 : 0.06 * (index + 1),
+              }}
             >
-              »
-            </span>
-            <span>{value}</span>
-          </motion.li>
-        ))}
-      </ul>
+              <span
+                className="mt-[0.05em] shrink-0 font-bold text-secondary"
+                aria-hidden
+              >
+                »
+              </span>
+              <span>{value}</span>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

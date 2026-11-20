@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
@@ -24,36 +25,50 @@ export function ContactSection() {
         transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
         className="max-w-5xl"
       >
-        <h2 className="text-display-lg mb-3">Matt Smith</h2>
+        <div className="mb-10 flex flex-col items-start gap-5 sm:flex-row sm:gap-6">
+          <Image
+            src="/images/Profile_smaller.png"
+            alt="Matt Smith"
+            width={120}
+            height={120}
+            className="size-38 shrink-0 rounded-md object-cover sm:size-40"
+            sizes="(max-width: 640px) 128px, 160px"
+            priority
+          />
 
-        <p className="text-headline-md mb-2 text-muted-foreground">
-          Software Engineer (UVic BSEng)
-        </p>
+          <div className="min-w-0">
+            <h2 className="text-display-lg mb-3">Matt Smith</h2>
 
-        <div className="mb-10 flex items-center gap-3">
-          <a
-            href="https://github.com/MatthewHightech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={socialClass}
-            aria-label="GitHub profile"
-          >
-            <Github className="size-5" aria-hidden />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/matthew-smith-softdev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={socialClass}
-            aria-label="LinkedIn profile"
-          >
-            <Linkedin className="size-5" aria-hidden />
-          </a>
+            <p className="text-headline-md mb-2 text-muted-foreground">
+              Software Engineer (UVic BSEng)
+            </p>
+
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/MatthewHightech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={socialClass}
+                aria-label="GitHub profile"
+              >
+                <Github className="size-5" aria-hidden />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/matthew-smith-softdev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={socialClass}
+                aria-label="LinkedIn profile"
+              >
+                <Linkedin className="size-5" aria-hidden />
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="mb-10 space-y-4 text-body-lg leading-relaxed text-muted-foreground">
           <p>
-            I have a very broad approach to engineering. I&apos;ve determined
+            I&apos;ve determined
             that the more I can explore, the more data I have to inform my
             decisions and the easier it is to learn new things. My pursuit of
             guitar,{" "}
@@ -69,7 +84,7 @@ export function ContactSection() {
             effective engineer. I&apos;m constantly learning how to learn.
           </p>
           <p>
-            I&apos;m in the pursuit of building tools people can easily use and that deliver value to communities through
+            I aspire to build user-friendly tools that deliver value to communities through
             organization, education, public safety, and healthcare.
           </p>
         </div>
