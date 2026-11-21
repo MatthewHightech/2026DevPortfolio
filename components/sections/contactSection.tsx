@@ -73,7 +73,7 @@ export function ContactSection() {
             decisions and the easier it is to learn new things. My pursuit of
             guitar,{" "}
             <a
-              href="https://tovproductions.ca/video"
+              href="https://media.mattsmith.sh/videography"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground underline decoration-outline-variant underline-offset-4 transition-colors hover:text-secondary hover:decoration-secondary"
