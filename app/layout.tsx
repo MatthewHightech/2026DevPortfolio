@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Hanken_Grotesk, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
         className={`${hankenGrotesk.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} bg-background text-foreground antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

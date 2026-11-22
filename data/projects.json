@@ -5,7 +5,7 @@
     "description": [
       "Lead a team of 5 developers building flight software for a wildfire-response drone that finds, navigates to, and extinguishes fires",
       "Trained a YOLO computer vision model that runs on a Raspberry Pi to detect fires and guide the vehicle",
-      "Run weekly software meetings, pair-program with teammates, review pull requests, and keep project management on track"
+      "Ran weekly software meetings, pair-programmed with teammates, reviewed all pull requests, and kept project management on track"
     ],
     "techStack": [
       "Python",
