@@ -1,17 +1,25 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { Github, Globe } from "lucide-react";
 import type projects from "@/data/projects.json";
 import { MediaSlide, type ProjectMediaItem } from "@/components/ui/mediaSlide";
 import { ProjectImage } from "@/components/ui/projectImage";
-import { ProjectMediaLightbox } from "@/components/ui/projectMediaLightbox";
 import { ProjectMediaPrefetch } from "@/components/ui/projectMediaPrefetch";
 import { TectonicButton } from "@/components/ui/tectonicButton";
 import {
   type ImageDimensions,
   isPortraitImage,
 } from "@/lib/imageOrientation";
+
+const ProjectMediaLightbox = dynamic(
+  () =>
+    import("@/components/ui/projectMediaLightbox").then(
+      (mod) => mod.ProjectMediaLightbox
+    ),
+  { ssr: false }
+);
 
 type Project = (typeof projects)[number];
 
@@ -135,15 +143,17 @@ export function ProjectModule({ project }: ProjectModuleProps) {
         )}
       </article>
 
-      <ProjectMediaLightbox
-        media={media}
-        title={project.title}
-        techStack={project.techStack}
-        description={project.description}
-        initialIndex={0}
-        open={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-      />
+      {lightboxOpen && (
+        <ProjectMediaLightbox
+          media={media}
+          title={project.title}
+          techStack={project.techStack}
+          description={project.description}
+          initialIndex={0}
+          open={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+        />
+      )}
     </>
   );
 }

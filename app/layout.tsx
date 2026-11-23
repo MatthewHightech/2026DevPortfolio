@@ -16,8 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500"],
-  preload: true,
+  weight: ["500"],
+  preload: false,
   adjustFontFallback: true,
 });
 
@@ -25,12 +25,13 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["500"],
   preload: true,
   adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mattsmith.sh"),
   title: "Matt Smith — Software Engineer Portfolio",
   description:
     "Software engineer generalist portfolio — projects, experience, and contact.",

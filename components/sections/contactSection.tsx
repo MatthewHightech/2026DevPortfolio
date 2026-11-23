@@ -32,8 +32,7 @@ export function ContactSection() {
             width={120}
             height={120}
             className="size-38 shrink-0 rounded-md object-cover sm:size-40"
-            sizes="(max-width: 640px) 128px, 160px"
-            priority
+            sizes="(max-width: 640px) 152px, 160px"
           />
 
           <div className="min-w-0">

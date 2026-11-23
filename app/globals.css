@@ -124,4 +124,24 @@ body {
       padding-right: 3rem;
     }
   }
+
+  /* Transform-only reveal keeps LCP text painted (avoid opacity: 0). */
+  .hero-rise {
+    animation: hero-rise 0.4s ease-out both;
+  }
+
+  @keyframes hero-rise {
+    from {
+      transform: translateY(12px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-rise {
+      animation: none;
+    }
+  }
 }
