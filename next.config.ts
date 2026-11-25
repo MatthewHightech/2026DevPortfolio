@@ -14,6 +14,8 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+    // Qualities used by fun gallery thumbs/lightbox + favourites.
+    qualities: [60, 65, 75, 82],
     // Avoid stale optimized images while iterating locally.
     minimumCacheTTL: isDev ? 0 : 60 * 60 * 24 * 30,
   },

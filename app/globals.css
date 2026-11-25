@@ -71,6 +71,18 @@ body {
   background: color-mix(in srgb, var(--secondary) 22%, transparent);
 }
 
+/* Hide native scrollbar — fun site uses a painted Win9x bar instead. */
+.fun-site-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fun-site-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 @layer utilities {
   .text-display-lg {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
