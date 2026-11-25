@@ -13,7 +13,7 @@ const FAVOURITES = [
     value: "El Capitan",
     description:
       "Still haven't climbed past 5ft though...one day.",
-    image: "/images/fun/rock.JPG",
+    image: "/images/fun/rock.jpg",
     imageFit: "contain" as const,
   },
   {
