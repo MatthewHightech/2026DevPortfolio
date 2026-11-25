@@ -34,11 +34,11 @@ export function FunChrome({ children }: { children: ReactNode }) {
         </div>
 
         <div className="mb-3 flex flex-wrap items-center justify-center gap-2">
-          <PlaneLeft className="shrink-0 [image-rendering:pixelated]" />
+          <PlaneLeft className="hidden shrink-0 [image-rendering:pixelated] sm:block" />
           <h1 className="m-0 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[clamp(1.6rem,5vw,2.4rem)] font-bold leading-[1.15] text-[#ffff66]">
             Matt Smith&apos;s Website
           </h1>
-          <PlaneRight className="shrink-0 [image-rendering:pixelated]" />
+          <PlaneRight className="hidden shrink-0 [image-rendering:pixelated] sm:block" />
         </div>
 
         <div className="mx-auto grid max-w-[920px] grid-cols-1 items-start gap-3 min-[760px]:grid-cols-[140px_minmax(0,1fr)_110px] min-[760px]:gap-x-3 min-[760px]:gap-y-2">
