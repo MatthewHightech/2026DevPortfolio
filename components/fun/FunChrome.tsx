@@ -18,22 +18,19 @@ const navLinkClass =
   "inline-flex items-center gap-1.5 font-['Times_New_Roman',Times,serif] text-[0.95rem] font-bold uppercase text-[#c060ff] underline hover:text-[#e090ff]";
 
 const backBtnClass =
-  "mt-1.5 inline-block cursor-pointer rounded-full border-0 bg-[linear-gradient(#9cf,#36c_45%,#06a_70%,#9cf)] px-[1.1rem] py-[0.35rem] font-['Arial_Black',Arial,sans-serif] text-[0.8rem] font-black tracking-[0.06em] text-white no-underline shadow-[inset_0_2px_0_rgba(255,255,255,0.55),2px_2px_0_#000] active:shadow-[inset_0_2px_4px_#000]";
+  "inline-block cursor-pointer rounded-full border-0 bg-[linear-gradient(#9cf,#36c_45%,#06a_70%,#9cf)] px-[1.1rem] py-[0.35rem] font-['Arial_Black',Arial,sans-serif] text-[0.8rem] font-black tracking-[0.06em] text-white no-underline shadow-[inset_0_2px_0_rgba(255,255,255,0.55),2px_2px_0_#000] active:shadow-[inset_0_2px_4px_#000]";
 
 export function FunChrome({ children }: { children: ReactNode }) {
   return (
     <FunScrollArea>
       <div className="relative min-h-full bg-black bg-[radial-gradient(#5a4cff_1px,transparent_1px),radial-gradient(#3a6aff_1px,transparent_1px)] bg-[length:52px_52px,37px_37px] bg-[position:0_0,18px_26px] px-2 pt-2 pb-8 font-['Times_New_Roman',Times,serif] text-[#ffff66] selection:bg-[#ffff66] selection:text-black">
-        <div className="mx-auto mt-1 mb-3 w-max max-w-full border border-black bg-[#b8d4ff] px-[0.55rem] py-[0.2rem] text-center">
-          <a
-            href="/fun"
-            className="font-[Arial,Helvetica,sans-serif] text-[0.7rem] font-bold text-[#0033cc] underline"
-          >
-            WE WILL PAY YOU $5 JUST FOR SIGNING UP! CLICK HERE NOW
-          </a>
+        <div className="absolute top-4 right-6 z-40 md:right-12">
+          <Link href="/" className={backBtnClass}>
+            BACK
+          </Link>
         </div>
 
-        <div className="mb-3 flex flex-wrap items-center justify-center gap-2">
+        <div className="mb-3 flex flex-wrap items-center justify-center gap-2 pt-1">
           <PlaneLeft className="hidden shrink-0 [image-rendering:pixelated] sm:block" />
           <h1 className="m-0 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[clamp(1.6rem,5vw,2.4rem)] font-bold leading-[1.15] text-[#ffff66]">
             Matt Smith&apos;s Website
@@ -49,9 +46,6 @@ export function FunChrome({ children }: { children: ReactNode }) {
                 {item.label}
               </Link>
             ))}
-            <Link href="/" className={backBtnClass}>
-              BACK
-            </Link>
           </nav>
 
           <main className="min-w-0 px-1">{children}</main>
@@ -61,7 +55,9 @@ export function FunChrome({ children }: { children: ReactNode }) {
             aria-label="Sponsored"
           >
             <a
-              href="/fun"
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex w-[100px] flex-col items-center gap-1.5 border border-[#36c] bg-[#9cf] px-1.5 pt-2 pb-3 text-center font-[Arial,Helvetica,sans-serif] text-[0.7rem] font-bold leading-[1.25] text-[#003] no-underline"
             >
               <strong className="text-[0.8rem] text-[#06c]">CLICK HERE</strong>
@@ -104,7 +100,7 @@ export function FunChrome({ children }: { children: ReactNode }) {
             </span>
           </a>
           <a
-            href="/fun"
+            href="mailto:mattsmithwebdev@gmail.com"
             className="inline-block border-[3px] border-[#cfc] bg-[#9d9] px-5 py-[0.45rem] font-['Times_New_Roman',Times,serif] text-base font-bold text-[#c00] no-underline [border-style:outset] [text-shadow:1px_1px_0_#fff]"
           >
             Click here to enter our chat room

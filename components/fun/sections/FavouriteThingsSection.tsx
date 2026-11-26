@@ -28,12 +28,9 @@ const FAVOURITES = [
 export function FavouriteThingsSection() {
   return (
     <section className="scroll-mt-2 py-1.5">
-      <h2 className="mb-1.5 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[1.35rem] font-bold text-[#ffff66]">
+      <h2 className="mb-1.5 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[1.6rem] font-bold text-[#ffff66]">
         My Favourite Things
       </h2>
-      <p className="mb-3 text-left text-[1.05rem] leading-[1.45] text-[#ffff66]">
-        A totally scientific list of things I like.
-      </p>
       <ul className="m-0 flex list-none flex-col gap-3 p-0">
         {FAVOURITES.map((item) => {
           const uncropped =
