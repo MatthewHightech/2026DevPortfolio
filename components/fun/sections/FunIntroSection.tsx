@@ -7,7 +7,7 @@ const bodyClass =
 export function FunIntroSection() {
   return (
     <section className="scroll-mt-2 py-1.5">
-      <h2 className="mb-[0.65rem] flex flex-wrap items-center justify-center gap-[0.45rem] text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[clamp(1.15rem,3vw,1.5rem)] font-bold text-white">
+      <h2 className="font-comic mb-[0.65rem] flex flex-wrap items-center justify-center gap-[0.45rem] text-center text-[clamp(1.15rem,3vw,1.5rem)] font-bold text-white">
         <CameraIcon />
         <span>Welcome to my Homepage</span>
         <CameraIcon />

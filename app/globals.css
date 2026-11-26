@@ -84,6 +84,11 @@ body {
 }
 
 @layer utilities {
+  /* Prefer system Comic Sans; Comic Neue covers iOS and other devices without it. */
+  .font-comic {
+    font-family: "Comic Sans MS", "Comic Sans", var(--font-comic-neue), cursive;
+  }
+
   .text-display-lg {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 700;

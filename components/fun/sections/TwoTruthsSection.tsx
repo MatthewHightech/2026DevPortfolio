@@ -33,7 +33,7 @@ export function TwoTruthsSection() {
 
   return (
     <section id="two-truths" className="scroll-mt-2 py-1.5">
-      <h2 className="mb-2 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[1.6rem] font-bold text-[#ffff66]">
+      <h2 className="font-comic mb-2 text-center text-[1.6rem] font-bold text-[#ffff66]">
         Two Truths and a Lie
       </h2>
       <p className="mb-3 text-left text-[1.15rem] leading-[1.45] text-[#ffff66]">

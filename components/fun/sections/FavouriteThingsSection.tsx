@@ -28,7 +28,7 @@ const FAVOURITES = [
 export function FavouriteThingsSection() {
   return (
     <section className="scroll-mt-2 py-1.5">
-      <h2 className="mb-1.5 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[1.6rem] font-bold text-[#ffff66]">
+      <h2 className="font-comic mb-1.5 text-center text-[1.6rem] font-bold text-[#ffff66]">
         My Favourite Things
       </h2>
       <ul className="m-0 flex list-none flex-col gap-3 p-0">

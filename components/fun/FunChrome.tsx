@@ -24,7 +24,7 @@ export function FunChrome({ children }: { children: ReactNode }) {
   return (
     <FunScrollArea>
       <div className="relative min-h-full bg-black bg-[radial-gradient(#5a4cff_1px,transparent_1px),radial-gradient(#3a6aff_1px,transparent_1px)] bg-[length:52px_52px,37px_37px] bg-[position:0_0,18px_26px] px-2 pt-2 pb-8 font-['Times_New_Roman',Times,serif] text-[#ffff66] selection:bg-[#ffff66] selection:text-black">
-        <div className="absolute top-4 right-6 z-40 md:right-12">
+        <div className="mb-2 flex justify-end px-2 pt-1 md:absolute md:top-4 md:right-12 md:z-40 md:mb-0 md:px-0 md:pt-0">
           <Link href="/" className={backBtnClass}>
             BACK
           </Link>
@@ -32,7 +32,7 @@ export function FunChrome({ children }: { children: ReactNode }) {
 
         <div className="mb-3 flex flex-wrap items-center justify-center gap-2 pt-1">
           <PlaneLeft className="hidden shrink-0 [image-rendering:pixelated] sm:block" />
-          <h1 className="m-0 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[clamp(1.6rem,5vw,2.4rem)] font-bold leading-[1.15] text-[#ffff66]">
+          <h1 className="font-comic m-0 text-center text-[clamp(1.6rem,5vw,2.4rem)] font-bold leading-[1.15] text-[#ffff66]">
             Matt Smith&apos;s Website
           </h1>
           <PlaneRight className="hidden shrink-0 [image-rendering:pixelated] sm:block" />
@@ -51,7 +51,7 @@ export function FunChrome({ children }: { children: ReactNode }) {
           <main className="min-w-0 px-1">{children}</main>
 
           <aside
-            className="flex flex-col items-center gap-8"
+            className="flex flex-row items-center justify-center gap-6 min-[760px]:flex-col min-[760px]:gap-8"
             aria-label="Sponsored"
           >
             <a

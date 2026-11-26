@@ -4,6 +4,9 @@ import { HeroSection } from "@/components/sections/heroSection";
 import { ProjectsSection } from "@/components/sections/projectsSection";
 import Link from "next/link";
 
+const funVersionLinkClass =
+  "font-sans text-sm text-muted-foreground underline underline-offset-[0.15em] opacity-70 hover:text-foreground hover:opacity-100";
+
 export default function SiteLayout({
   children,
 }: Readonly<{
@@ -12,11 +15,8 @@ export default function SiteLayout({
   return (
     <>
       <div className="relative">
-        <div className="absolute top-4 right-6 z-40 md:right-12">
-          <Link
-            href="/fun"
-            className="font-sans text-sm text-muted-foreground underline underline-offset-[0.15em] opacity-70 hover:text-foreground hover:opacity-100"
-          >
+        <div className="absolute top-4 right-6 z-40 hidden md:right-12 md:block">
+          <Link href="/fun" className={funVersionLinkClass}>
             fun version
           </Link>
         </div>
@@ -25,6 +25,11 @@ export default function SiteLayout({
           <ProjectsSection />
           <ContactSection />
         </main>
+        <div className="page-margin mx-auto max-w-7xl pb-2 md:hidden">
+          <Link href="/fun" className={funVersionLinkClass}>
+            fun version
+          </Link>
+        </div>
         <SiteFooter />
       </div>
       {children}

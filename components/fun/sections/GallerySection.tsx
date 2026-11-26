@@ -155,7 +155,7 @@ export function GallerySection({ photos }: { photos: FunGalleryPhoto[] }) {
 
   return (
     <section className="scroll-mt-2 py-1.5">
-      <h2 className="mb-3 text-center font-['Comic_Sans_MS','Comic_Sans',cursive] text-[1.6rem] font-bold text-[#ffff66]">
+      <h2 className="font-comic mb-3 text-center text-[1.6rem] font-bold text-[#ffff66]">
         Gallery
       </h2>
 
