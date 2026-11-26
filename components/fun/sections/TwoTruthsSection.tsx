@@ -51,26 +51,26 @@ export function TwoTruthsSection() {
               onClick={() => setGuessId(item.id)}
             >
               <b>Choice {index + 1}:</b> {item.text}
-              {revealed ? (
+              {guessId === item.id ? (
                 <span
                   className={
                     item.isLie
-                      ? "font-bold text-[#ff6666]"
-                      : "font-bold text-[#66ff99]"
+                      ? "font-bold text-[#66ff99]"
+                      : "font-bold text-[#ff6666]"
                   }
                 >
                   {item.isLie ? " ← LIE" : " ← TRUTH"}
                 </span>
               ) : null}
             </button>
-            {revealed ? (
+            {guessId === item.id ? (
               <p className="mt-1.5 border-2 border-[#ffff66] bg-[#1a0033] px-3 py-2.5 text-[1.15rem] leading-relaxed text-[#ffff99]">
                 <b
                   className={
-                    item.isLie ? "text-[#ff6666]" : "text-[#66ff99]"
+                    item.isLie ? "text-[#66ff99]" : "text-[#ff6666]"
                   }
                 >
-                  {item.isLie ? "A Lie:" : "True story:"}
+                  {item.isLie ? "CORRECT, it was a Lie:" : "WRONG, True story:"}
                 </b>{" "}
                 {item.story}
               </p>
@@ -80,13 +80,6 @@ export function TwoTruthsSection() {
       </div>
       {revealed ? (
         <div className="mt-3">
-          <p className="mb-2 text-[1.15rem] text-[#ffff66]">
-            <b>
-              {guessedLie
-                ? "Nice — you caught the lie!"
-                : "Nope — that one was true."}
-            </b>
-          </p>
           <button
             type="button"
             className="mt-1.5 inline-block cursor-pointer rounded-full border-0 bg-[linear-gradient(#9cf,#36c_45%,#06a_70%,#9cf)] px-5 py-2 font-['Arial_Black',Arial,sans-serif] text-[1rem] font-black tracking-[0.06em] text-white shadow-[inset_0_2px_0_rgba(255,255,255,0.55),2px_2px_0_#000] active:shadow-[inset_0_2px_4px_#000]"

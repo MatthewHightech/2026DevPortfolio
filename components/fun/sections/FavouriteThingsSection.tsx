@@ -17,9 +17,9 @@ const FAVOURITES = [
     imageFit: "contain" as const,
   },
   {
-    label: "Favourite food",
-    value: "Fresh Poké Bowls",
-    description: "Lead, built and deployed anniversary date night in a public rose garden, ensuring above expected surprise factor while adhering to local regulation and client preferences. Planning to scale 5x this year with anticipated IPO late 2027.",
+    label: "Favourite celebration",
+    value: "Date night",
+    description: "Led, designed and deployed anniversary date night in a public rose garden, ensuring above expected surprise factor while adhering to local regulation and client preferences. Planning to scale 5x this year with anticipated IPO late 2027.",
     image: "/images/fun/food.jpg",
     imageFit: "contain" as const,
   },

@@ -112,7 +112,7 @@ export function FunChrome({ children }: { children: ReactNode }) {
         </div>
 
         <footer className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-2 pb-2 text-[0.9rem] text-[#ffff66]">
-          <span>This page hosted by</span>
+          <span>This page is hosted by</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/fun/gc.gif"
