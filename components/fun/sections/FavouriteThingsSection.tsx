@@ -6,21 +6,21 @@ const FAVOURITES = [
     value: "Sombrio Beach, Vancouver Island, Canada",
     description:
       "Grew up surfing, camping, and backpacking along this stretch of coast. Never a bad day here.",
-    image: "/images/fun/surf.JPG",
+    image: "/images/fun/gallery/surf.JPG",
   },
   {
     label: "Favourite rock",
     value: "El Capitan",
     description:
       "Still haven't climbed past 5ft though...one day.",
-    image: "/images/fun/rock.jpg",
+    image: "/images/fun/gallery/rock.jpg",
     imageFit: "contain" as const,
   },
   {
     label: "Favourite celebration",
     value: "Date night",
     description: "Led, designed and deployed anniversary date night in a public rose garden, ensuring above expected surprise factor while adhering to local regulation and client preferences. Planning to scale 5x this year with anticipated IPO late 2027.",
-    image: "/images/fun/food.jpg",
+    image: "/images/fun/gallery/food.jpg",
     imageFit: "contain" as const,
   },
 ] as const;

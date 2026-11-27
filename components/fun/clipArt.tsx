@@ -62,20 +62,3 @@ export function CameraIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-
-export function HouseIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="18"
-      height="16"
-      viewBox="0 0 18 16"
-      aria-hidden
-      shapeRendering="crispEdges"
-    >
-      <polygon points="9,1 1,8 17,8" fill="#c44" />
-      <rect x="4" y="8" width="10" height="7" fill="#f5e6c8" />
-      <rect x="7" y="10" width="4" height="5" fill="#6af" />
-    </svg>
-  );
-}

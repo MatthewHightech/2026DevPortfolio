@@ -6,14 +6,20 @@ import { readdir } from "fs/promises";
 import path from "path";
 import sharp from "sharp";
 
-const FUN_IMAGES_DIR = path.join(process.cwd(), "public", "images", "fun");
+const FUN_GALLERY_DIR = path.join(
+  process.cwd(),
+  "public",
+  "images",
+  "fun",
+  "gallery",
+);
 
 /**
- * Reads every photo in /public/images/fun at request/build time.
- * GIFs (badges) are skipped; orientation comes from real pixel size.
+ * Reads every photo in /public/images/fun/gallery at request/build time.
+ * Non-photo assets (badges, gifs) live one level up and are ignored.
  */
 export async function getFunGalleryPhotos(): Promise<FunGalleryPhoto[]> {
-  const entries = await readdir(FUN_IMAGES_DIR, { withFileTypes: true });
+  const entries = await readdir(FUN_GALLERY_DIR, { withFileTypes: true });
   const files = entries
     .filter((entry) => entry.isFile() && isFunGalleryPhotoFilename(entry.name))
     .map((entry) => entry.name)
@@ -21,10 +27,10 @@ export async function getFunGalleryPhotos(): Promise<FunGalleryPhoto[]> {
 
   const photos = await Promise.all(
     files.map(async (filename): Promise<FunGalleryPhoto> => {
-      const filepath = path.join(FUN_IMAGES_DIR, filename);
+      const filepath = path.join(FUN_GALLERY_DIR, filename);
       const { width = 1, height = 1 } = await sharp(filepath).metadata();
       return {
-        src: `/images/fun/${encodeURIComponent(filename).replace(/%2F/gi, "/")}`,
+        src: `/images/fun/gallery/${encodeURIComponent(filename).replace(/%2F/gi, "/")}`,
         orientation: height > width ? "portrait" : "landscape",
       };
     }),
